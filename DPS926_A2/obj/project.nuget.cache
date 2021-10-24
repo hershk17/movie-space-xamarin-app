@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "0rTZAjML3TX18l34fFSaZPrv7Z0cx8RR1RXXz2D2nP8SAULo998euunD51gJSvUvXm9+B2y3vwQJZmAUIJiP6g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hersh\\source\\repos\\DPS926_A2\\DPS926_A2\\DPS926_A2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hersh\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\sqlitenetextensions\\2.1.0\\sqlitenetextensions.2.1.0.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\sqlitenetextensions.async\\2.1.0\\sqlitenetextensions.async.2.1.0.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.4\\sqlitepclraw.provider.e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\hersh\\.nuget\\packages\\xamarin.forms\\5.0.0.2125\\xamarin.forms.5.0.0.2125.nupkg.sha512"
+  ],
+  "logs": []
+}

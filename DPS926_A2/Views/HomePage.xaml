@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DPS926_A2.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding Title}">
+
+    <ScrollView>
+        <StackLayout BackgroundColor="#191919">
+            <CarouselView
+                x:Name="NowPlayingMoviesBackdrops"
+                Margin="0,0,0,0"
+                BackgroundColor="Black"
+                HeightRequest="420"
+                IsSwipeEnabled="False">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="#191919"
+                            HasShadow="True"
+                            Opacity="0.5">
+                            <Image Aspect="AspectFill" Source="{Binding backdrop_path}" />
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <Label
+                Margin="20,-390,0,210"
+                FontFamily="Helvetica Bold"
+                FontSize="44"
+                Text="&lt;p&gt;Now&lt;br&gt;Playing&lt;/p&gt;"
+                TextColor="WhiteSmoke"
+                TextType="Html" />
+
+            <CollectionView
+                x:Name="NowPlayingMoviesPosters"
+                Margin="20,-250,0,00"
+                BackgroundColor="Transparent"
+                HeightRequest="402"
+                ItemsLayout="HorizontalList"
+                Scrolled="NowPlayingMoviesPosters_Scrolled"
+                SelectionChanged="NowPlayingMovies_MovieSelected"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame
+                                Margin="0,0,60,0"
+                                Padding="0"
+                                BackgroundColor="Transparent"
+                                BorderColor="Black"
+                                CornerRadius="10"
+                                HasShadow="True"
+                                HeightRequest="402"
+                                WidthRequest="270">
+                                <Image Source="{Binding poster_path}" />
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label
+                Margin="20,20,0,0"
+                FontFamily="Helvetica Bold"
+                FontSize="26"
+                Text="Trending"
+                TextColor="WhiteSmoke" />
+
+            <CollectionView
+                x:Name="TrendingMovies"
+                Margin="0,0,0,0"
+                HeightRequest="220"
+                ItemsLayout="HorizontalList"
+                SelectionChanged="TrendingMovies_MovieSelected"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Vertical">
+                            <Frame
+                                Margin="20,0,0,0"
+                                Padding="0"
+                                BackgroundColor="#191919"
+                                BorderColor="Black"
+                                CornerRadius="10"
+                                HeightRequest="210"
+                                WidthRequest="141">
+                                <Image Source="{Binding poster_path}" />
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label
+                Margin="20,10,0,0"
+                FontFamily="Helvetica Bold"
+                FontSize="26"
+                Text="Top Rated"
+                TextColor="WhiteSmoke" />
+
+            <CollectionView
+                x:Name="TopRatedMovies"
+                Margin="0,0,0,0"
+                HeightRequest="220"
+                ItemsLayout="HorizontalList"
+                SelectionChanged="TopRatedMovies_ItemSelected"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Vertical">
+                            <Frame
+                                Margin="20,0,0,0"
+                                Padding="0"
+                                BackgroundColor="#191919"
+                                BorderColor="Black"
+                                CornerRadius="10"
+                                HeightRequest="210"
+                                WidthRequest="141">
+                                <Image Source="{Binding poster_path}" />
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label
+                Margin="20,10,0,0"
+                FontFamily="Helvetica Bold"
+                FontSize="26"
+                Text="Upcoming"
+                TextColor="WhiteSmoke" />
+
+            <CollectionView
+                x:Name="UpcomingMovies"
+                Margin="0,0,0,0"
+                HeightRequest="220"
+                ItemsLayout="HorizontalList"
+                SelectionChanged="UpcomingMovies_MovieSelected"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Vertical">
+                            <Frame
+                                Margin="20,0,0,0"
+                                Padding="0"
+                                BackgroundColor="#191919"
+                                BorderColor="Black"
+                                CornerRadius="10"
+                                HeightRequest="210"
+                                WidthRequest="141">
+                                <Image Source="{Binding poster_path}" />
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
