@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DPS926_A2.Views.ExplorePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DPS926_A2.Controls">
+
+    <ContentView>
+        <ScrollView>
+            <StackLayout BackgroundColor="#191919">
+                <Frame
+                    Margin="0,0,0,-390"
+                    Padding="0"
+                    HasShadow="True"
+                    HeightRequest="390"
+                    Opacity="0.3">
+                    <Image Aspect="AspectFill" Source="recommendations_backdrop.jpeg" />
+                </Frame>
+                <Grid Margin="20,33,10,30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        FontFamily="Helvetica Bold"
+                        FontSize="44"
+                        Text="Explore"
+                        TextColor="WhiteSmoke"
+                        TextType="Html"
+                        VerticalOptions="Center" />
+                    <ImageButton
+                        Grid.Column="1"
+                        Margin="0,0,10,0"
+                        Padding="15"
+                        Aspect="AspectFit"
+                        BackgroundColor="Transparent"
+                        Clicked="SearchButton_Clicked"
+                        HeightRequest="70"
+                        HorizontalOptions="End"
+                        Source="search.png"
+                        VerticalOptions="Center" />
+                </Grid>
+
+                <StackLayout Margin="20,0,20,20">
+                    <ImageButton
+                        BackgroundColor="#282828"
+                        BorderColor="Gray"
+                        BorderWidth="1"
+                        Clicked="SearchButton_Clicked"
+                        CornerRadius="10"
+                        HeightRequest="200" />
+
+                    <Label
+                        Margin="0,-125,0,0"
+                        FontFamily="Helvetica Light"
+                        FontSize="28"
+                        HorizontalOptions="Center"
+                        Text="Recommendations"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                </StackLayout>
+
+                <Label
+                    Margin="20,120,0,10"
+                    FontFamily="Helvetica Bold"
+                    FontSize="20"
+                    HorizontalOptions="Start"
+                    Text="Browse All"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+
+                <FlexLayout
+                    x:Name="GenreList"
+                    FlowDirection="LeftToRight"
+                    VerticalOptions="StartAndExpand"
+                    Wrap="Wrap" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentView>
+</ContentPage>

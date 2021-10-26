@@ -84,5 +84,10 @@ namespace DPS926_A2.Views
                 NowPlayingMoviesBackdrops.ScrollTo(centerMovieIdx);
             }
         }
+
+        private async void SearchButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SearchPage());
+        }
     }
 }

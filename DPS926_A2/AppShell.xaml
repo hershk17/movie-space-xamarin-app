@@ -28,10 +28,10 @@
         <Tab Title="Home" Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate local:HomePage}" />
         </Tab>
-        <Tab Title="Search" Icon="search.png">
-            <ShellContent ContentTemplate="{DataTemplate local:SearchPage}" />
+        <Tab Title="Explore" Icon="geography.png">
+            <ShellContent ContentTemplate="{DataTemplate local:ExplorePage}" />
         </Tab>
-        <Tab Title="Library" Icon="library.png">
+        <Tab Title="Library" Icon="folder.png">
             <ShellContent ContentTemplate="{DataTemplate local:LibraryPage}" />
         </Tab>
     </TabBar>

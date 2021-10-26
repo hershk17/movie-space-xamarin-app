@@ -15,6 +15,9 @@ namespace DPS926_A2.Models
         public string poster_path { get; set; }
         public string backdrop_path { set; get; }
         public double vote_average { set; get; }
+        public int vote_count { set; get; }
+        public double popularity { set; get; }
+        public string release_date { set; get; }
 
         public string _userWatchStatus;
         public string userWatchStatus
@@ -46,18 +49,21 @@ namespace DPS926_A2.Models
 
         public Movie() { }
 
-        public Movie(int id, string title, string poster_path, string backdrop_path, double vote_average, string userWatchStatus, string userRating)
+        public Movie(int id, string title, string poster_path, string backdrop_path, double vote_average, int vote_count, double popularity, string release_date, string userWatchStatus, string userRating)
         {
             this.id = id;
             this.title = title;
             this.poster_path = poster_path;
             this.backdrop_path = backdrop_path;
             this.vote_average = vote_average;
+            this.vote_count = vote_count;
+            this.popularity = popularity;
+            this.release_date = release_date;
             this.userWatchStatus = userWatchStatus;
             this.userRating = userRating;
         }
 
-        public Movie(Models.Movie movie) : this(movie.id, movie.title, movie.poster_path, movie.backdrop_path, movie.vote_average, movie.userWatchStatus, movie.userRating) { }
+        public Movie(Models.Movie movie) : this(movie.id, movie.title, movie.poster_path, movie.backdrop_path, movie.vote_average, movie.vote_count, movie.popularity, movie.release_date, movie.userWatchStatus, movie.userRating) { }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

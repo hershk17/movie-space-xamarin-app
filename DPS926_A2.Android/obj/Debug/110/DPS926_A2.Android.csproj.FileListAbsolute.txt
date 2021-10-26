@@ -55,12 +55,8 @@ C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\mipmap
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\mipmap-xxxhdpi\icon.png
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\mipmap-xxxhdpi\launcher_foreground.png
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\drawable\splash_logo.png
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\drawable\icon_about.png
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\drawable\icon_feed.png
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\drawable\library.png
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\drawable\home.png
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\drawable\search.png
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\drawable\info.png
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\uploadflags.txt
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\resolvedassemblies.hash
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\assets\DPS926_A2.Android.dll
@@ -590,3 +586,7 @@ C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\stamp\_Con
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\drawable\geography.png
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\drawable\folder.png
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\drawable\recommendations_backdrop.jpeg
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\drawable\sort.png

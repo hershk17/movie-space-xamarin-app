@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout
+    x:Class="DPS926_A2.Controls.SimpleMovieCard"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:DPS926_A2.Controls"
+    x:DataType="controls:SimpleMovieCard"
+    Orientation="Vertical">
+    <Frame
+        Margin="20,0,0,0"
+        Padding="0"
+        BackgroundColor="#191919"
+        BorderColor="Black"
+        CornerRadius="10"
+        HeightRequest="210"
+        WidthRequest="141">
+        <Image x:Name="poster" />
+    </Frame>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:Name="CommonStates">
+            <VisualState x:Name="Normal">
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Transparent" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="Selected">
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Transparent" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+</StackLayout>
