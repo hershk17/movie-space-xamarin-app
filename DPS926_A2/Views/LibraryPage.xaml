@@ -5,78 +5,90 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     BackgroundColor="#191919">
     <ContentPage.Content>
-        <CollectionView
+        <ListView
             x:Name="myList"
-            SelectionChanged="MovieSelected"
-            SelectionMode="Single">
-            <CollectionView.ItemTemplate>
+            Margin="15,0,15,0"
+            BackgroundColor="Gray"
+            HorizontalOptions="Center"
+            ItemSelected="MovieSelected"
+            RowHeight="200"
+            SelectionMode="Single"
+            VerticalOptions="Start">
+            <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Margin="5" BackgroundColor="#111111">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="80" />
-                            <RowDefinition Height="10" />
-                            <RowDefinition Height="50" />
-                            <RowDefinition Height="50" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="1.4*" />
-                            <ColumnDefinition Width="0.6*" />
-                        </Grid.ColumnDefinitions>
+                    <ViewCell>
+                        <Grid BackgroundColor="#151515">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="110" />
+                                <RowDefinition Height="25" />
+                                <RowDefinition Height="25" />
+                            </Grid.RowDefinitions>
 
-                        <Image
-                            Grid.Row="0"
-                            Grid.RowSpan="4"
-                            Grid.Column="0"
-                            Source="{Binding poster_path, StringFormat='https://image.tmdb.org/t/p/w780{0}'}" />
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            Grid.ColumnSpan="2"
-                            Padding="5,0,0,0"
-                            FontFamily="Helvetica Bold"
-                            FontSize="20"
-                            Text="{Binding title}"
-                            TextColor="WhiteSmoke"
-                            VerticalOptions="Center" />
-                        <StackLayout
-                            Grid.Row="2"
-                            Grid.Column="1"
-                            Grid.ColumnSpan="2"
-                            Padding="5,0,0,0"
-                            Orientation="Horizontal"
-                            VerticalOptions="End">
+                            <Frame
+                                Grid.Row="0"
+                                Grid.RowSpan="4"
+                                Grid.Column="0"
+                                Margin="0,15,0,15"
+                                Padding="0"
+                                BackgroundColor="White"
+                                BorderColor="Black"
+                                CornerRadius="5"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center">
+                                <Image Aspect="AspectFit" Source="{Binding poster_path, StringFormat='https://image.tmdb.org/t/p/w780{0}'}" />
+                            </Frame>
+
                             <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Grid.ColumnSpan="2"
+                                Padding="5,10,0,0"
                                 FontFamily="Helvetica Bold"
-                                FontSize="16"
-                                Text="Status: "
-                                TextColor="WhiteSmoke" />
-                            <Label
-                                FontFamily="Helvetica"
-                                FontSize="16"
-                                Text="{Binding userWatchStatus}"
-                                TextColor="WhiteSmoke" />
-                        </StackLayout>
-                        <StackLayout
-                            Grid.Row="3"
-                            Grid.Column="1"
-                            Padding="5,0,0,0"
-                            Orientation="Horizontal"
-                            VerticalOptions="Start">
-                            <Label
-                                FontFamily="Helvetica Bold"
-                                FontSize="16"
-                                Text="Score: "
-                                TextColor="WhiteSmoke" />
-                            <Label
-                                FontFamily="Helvetica"
-                                FontSize="16"
-                                Text="{Binding userRating}"
-                                TextColor="WhiteSmoke" />
-                        </StackLayout>
-                    </Grid>
+                                FontSize="20"
+                                Text="{Binding title}"
+                                TextColor="WhiteSmoke"
+                                VerticalOptions="Start" />
+
+                            <StackLayout
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Grid.ColumnSpan="2"
+                                Padding="5,0,0,0"
+                                Orientation="Horizontal"
+                                VerticalOptions="End">
+                                <Label
+                                    FontFamily="Helvetica Bold"
+                                    FontSize="16"
+                                    Text="Status: "
+                                    TextColor="WhiteSmoke" />
+                                <Label
+                                    FontFamily="Helvetica"
+                                    FontSize="16"
+                                    Text="{Binding userWatchStatus}"
+                                    TextColor="WhiteSmoke" />
+                            </StackLayout>
+                            <StackLayout
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Grid.ColumnSpan="2"
+                                Padding="5,0,0,0"
+                                Orientation="Horizontal"
+                                VerticalOptions="Start">
+                                <Label
+                                    FontFamily="Helvetica Bold"
+                                    FontSize="16"
+                                    Text="Score: "
+                                    TextColor="WhiteSmoke" />
+                                <Label
+                                    FontFamily="Helvetica"
+                                    FontSize="16"
+                                    Text="{Binding userRating}"
+                                    TextColor="WhiteSmoke" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
                 </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

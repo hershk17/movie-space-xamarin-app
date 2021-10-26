@@ -37,12 +37,14 @@ namespace DPS926_A2
 
             string completeURL;
             int elem = 1;
+            int cnt = 0, maxCnt = 10;
 
             switch (type)
             {
                 case "nowPlaying":
                     completeURL = nowPlaying + apiParam + key;
                     elem = 2;
+                    maxCnt = 5;
                     break;
                 case "trending":
                     completeURL = trendingURL + apiParam + key;
@@ -56,6 +58,7 @@ namespace DPS926_A2
                     break;
                 case "search":
                     completeURL = searchURL + apiParam + key + queryParam + query;
+                    maxCnt = 20;
                     break;
                 default:
                     completeURL = nowPlaying + apiParam + key;
@@ -78,13 +81,16 @@ namespace DPS926_A2
 
             string imageResolution = highQualityImages ? "780" : "300";
 
-            int cnt = 0, maxCnt = 10;
             foreach (Models.Movie i in resultList)
             {
                 if (cnt == maxCnt)
                     break;
-                movieCollection.Add(new Models.Movie(i.id, i.title, "https://image.tmdb.org/t/p/w" + imageResolution + i.poster_path,
-                    "https://image.tmdb.org/t/p/w" + imageResolution + i.backdrop_path, i.vote_average, i.userWatchStatus, i.userRating));
+
+                if(i.vote_count > 0 && i.popularity > 10)
+                    movieCollection.Add(new Models.Movie(i.id, i.title, "https://image.tmdb.org/t/p/w" + imageResolution + i.poster_path,
+                        "https://image.tmdb.org/t/p/w" + imageResolution + i.backdrop_path, i.vote_average, i.vote_count, i.popularity,
+                        i.release_date, i.userWatchStatus, i.userRating));
+                
                 cnt++;
             }
 
@@ -113,7 +119,7 @@ namespace DPS926_A2
 
         public async Task<ObservableCollection<Models.Movie>> SearchMovie(string query)
         {
-            return await GetMovies("search", false, query);
+            return await GetMovies("search", true, query);
         }
 
         public async Task<Models.MovieDetails> GetMovieDetails(int id)

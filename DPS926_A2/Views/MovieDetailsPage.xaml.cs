@@ -15,7 +15,7 @@ namespace DPS926_A2.Views
     {
         Models.MovieDetails currMovie = new Models.MovieDetails();
         
-        string[] Ratings = { "10 - Masterpiece", "9 - Great", "8 - Very Good", "7 - Good", "6 - Fine", "5 - Average", "4 - Bad", "3 - Very Bad", "2 - Horrible", "1 - Appalling" };
+        string[] Ratings = { "10★", "9★", "8★", "7★", "6★", "5★", "4★", "3★", "2★", "1★" };
         string[] Statuses = { "Watching", "Completed", "Plan to Watch" };
 
         public MovieDetailsPage(Models.MovieDetails movieDetails)
@@ -45,12 +45,13 @@ namespace DPS926_A2.Views
             audience_rating.Text = currMovie.vote_average.ToString() + "★ (" + currMovie.vote_count.ToString() + ")";
             overview.Text = currMovie.overview;
             GenreList.ItemsSource = currMovie.genres;
-            release_date.Text = currMovie.release_date;
+            release_date.Text = DateTime.Parse(currMovie.release_date).ToLongDateString();
             TimeSpan timespan = TimeSpan.FromMinutes(currMovie.runtime);
             runtime.Text = (timespan.Hours + "hr " + timespan.Minutes + "mins").ToString();
             language.Text = currMovie.original_language;
             budget.Text = currMovie.budget.ToString("C", CultureInfo.CreateSpecificCulture("en-US"));
             revenue.Text = currMovie.revenue.ToString("C", CultureInfo.CreateSpecificCulture("en-US"));
+            popularity.Text = currMovie.popularity.ToString();
             homepage.Text = currMovie.homepage;
 
             UpdateUserMovieInfo();
@@ -83,7 +84,7 @@ namespace DPS926_A2.Views
         {
             base.OnDisappearing();
 
-            Navigation.PopToRootAsync();
+            Navigation.PopAsync();
         }
 
         private async void addToListClicked(object sender, EventArgs e)
@@ -113,8 +114,6 @@ namespace DPS926_A2.Views
                 AddToList.IsVisible = true;
                 UserMovieInfo.IsVisible = false;
                 DelFromList.IsVisible = false;
-
-                await Navigation.PopAsync();
             }
         }
 

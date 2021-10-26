@@ -5,7 +5,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="{Binding Title}">
 
-    
     <ScrollView>
         <StackLayout BackgroundColor="#191919">
             <CarouselView
@@ -27,13 +26,32 @@
                 </CarouselView.ItemTemplate>
             </CarouselView>
 
-            <Label
-                Margin="20,-390,0,210"
-                FontFamily="Helvetica Bold"
-                FontSize="44"
-                Text="&lt;p&gt;Now&lt;br&gt;Playing&lt;/p&gt;"
-                TextColor="WhiteSmoke"
-                TextType="Html" />
+            <StackLayout Margin="20,-390,0,260" Orientation="Horizontal">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        FontFamily="Helvetica Bold"
+                        FontSize="44"
+                        Text="Now&lt;br&gt;Playing"
+                        TextColor="WhiteSmoke"
+                        TextType="Html" />
+                    <ImageButton
+                        Grid.Column="1"
+                        Margin="0,8,-24,0"
+                        Padding="15"
+                        Aspect="AspectFit"
+                        BackgroundColor="Transparent"
+                        Clicked="SearchButton_Clicked"
+                        HeightRequest="70"
+                        HorizontalOptions="End"
+                        Source="search.png"
+                        VerticalOptions="Start" />
+                </Grid>
+            </StackLayout>
 
             <CollectionView
                 x:Name="NowPlayingMoviesPosters"

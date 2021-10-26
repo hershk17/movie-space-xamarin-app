@@ -31,16 +31,7 @@ namespace DPS926_A2.Views
 
         async private void MovieSelected(object sender, SelectionChangedEventArgs e)
         {
-            if (myList.SelectedItem != null)
-            {
-                await Navigation.PushAsync(new MovieDetailsPage((Models.MovieDetails)myList.SelectedItem));
-                myList.SelectedItem = null;
-            }
+            await Navigation.PushAsync(new MovieDetailsPage((Models.MovieDetails)myList.SelectedItem));
         }
-
-        /*private void EditButtonClicked(object sender, EventArgs e)
-        {
-
-        }*/
     }
 }

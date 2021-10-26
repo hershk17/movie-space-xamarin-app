@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DPS926_A2.Views.ExplorePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#242424">
+
+                <Grid Margin="20,40,10,30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        FontFamily="Helvetica Bold"
+                        FontSize="44"
+                        Text="Explore"
+                        TextColor="WhiteSmoke"
+                        TextType="Html"
+                        VerticalOptions="Center" />
+                    <ImageButton
+                        Grid.Column="1"
+                        Margin="0,0,10,0"
+                        Padding="15"
+                        Aspect="AspectFit"
+                        BackgroundColor="Transparent"
+                        Clicked="SearchButton_Clicked"
+                        HeightRequest="70"
+                        HorizontalOptions="End"
+                        Source="search.png"
+                        VerticalOptions="Center" />
+                </Grid>
+
+                <StackLayout Margin="20,0,20,0">
+                    <Frame
+                        Padding="1"
+                        BackgroundColor="Black"
+                        BorderColor="LightGray"
+                        CornerRadius="5"
+                        HasShadow="True"
+                        HeightRequest="208">
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="Black"
+                            BorderColor="Black"
+                            CornerRadius="5">
+                            <StackLayout>
+                                <Image Opacity="0.4" Source="recommendations_backdrop.jpeg" />
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+
+                    <Label
+                        Margin="0,-135,0,0"
+                        FontFamily="Helvetica Light"
+                        FontSize="28"
+                        HorizontalOptions="Center"
+                        Text="Recommendations"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                </StackLayout>
+
+                <Label
+                    Margin="20,120,0,5"
+                    FontFamily="Helvetica Bold"
+                    FontSize="20"
+                    HorizontalOptions="Start"
+                    Text="Browse All"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+
+                <Grid Margin="10,0,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="10,0,5,50">
+                        <Frame
+                            Padding="1"
+                            BackgroundColor="Black"
+                            BorderColor="LightGray"
+                            CornerRadius="5"
+                            HasShadow="True"
+                            HeightRequest="110">
+                            <Frame
+                                Padding="0"
+                                BackgroundColor="Black"
+                                BorderColor="Black"
+                                CornerRadius="5">
+                                <StackLayout>
+                                    <Image Opacity="0.4" />
+                                </StackLayout>
+                            </Frame>
+                        </Frame>
+
+                        <Label
+                            Margin="0,-75,0,0"
+                            FontFamily="Helvetica Light"
+                            FontSize="20"
+                            HorizontalOptions="Center"
+                            Text="Genre 1"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="5,0,10,50">
+                        <Frame
+                            Padding="1"
+                            BackgroundColor="Black"
+                            BorderColor="LightGray"
+                            CornerRadius="5"
+                            HasShadow="True"
+                            HeightRequest="110">
+                            <Frame
+                                Padding="0"
+                                BackgroundColor="Black"
+                                BorderColor="Black"
+                                CornerRadius="5">
+                                <StackLayout>
+                                    <Image Opacity="0.4" />
+                                </StackLayout>
+                            </Frame>
+                        </Frame>
+
+                        <Label
+                            Margin="0,-75,0,0"
+                            FontFamily="Helvetica Light"
+                            FontSize="20"
+                            HorizontalOptions="Center"
+                            Text="Genre 2"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="10,0,5,50">
+                        <Frame
+                            Padding="1"
+                            BackgroundColor="Black"
+                            BorderColor="LightGray"
+                            CornerRadius="5"
+                            HasShadow="True"
+                            HeightRequest="110">
+                            <Frame
+                                Padding="0"
+                                BackgroundColor="Black"
+                                BorderColor="Black"
+                                CornerRadius="5">
+                                <StackLayout>
+                                    <Image Opacity="0.4" />
+                                </StackLayout>
+                            </Frame>
+                        </Frame>
+
+                        <Label
+                            Margin="0,-75,0,0"
+                            FontFamily="Helvetica Light"
+                            FontSize="20"
+                            HorizontalOptions="Center"
+                            Text="Genre 3"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="5,0,10,50">
+                        <Frame
+                            Padding="1"
+                            BackgroundColor="Black"
+                            BorderColor="LightGray"
+                            CornerRadius="5"
+                            HasShadow="True"
+                            HeightRequest="110">
+                            <Frame
+                                Padding="0"
+                                BackgroundColor="Black"
+                                BorderColor="Black"
+                                CornerRadius="5">
+                                <StackLayout>
+                                    <Image Opacity="0.4" />
+                                </StackLayout>
+                            </Frame>
+                        </Frame>
+
+                        <Label
+                            Margin="0,-75,0,0"
+                            FontFamily="Helvetica Light"
+                            FontSize="20"
+                            HorizontalOptions="Center"
+                            Text="Genre 4"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Margin="10,0,5,50">
+                        <Frame
+                            Padding="1"
+                            BackgroundColor="Black"
+                            BorderColor="LightGray"
+                            CornerRadius="5"
+                            HasShadow="True"
+                            HeightRequest="110">
+                            <Frame
+                                Padding="0"
+                                BackgroundColor="Black"
+                                BorderColor="Black"
+                                CornerRadius="5">
+                                <StackLayout>
+                                    <Image Opacity="0.4" />
+                                </StackLayout>
+                            </Frame>
+                        </Frame>
+
+                        <Label
+                            Margin="0,-75,0,0"
+                            FontFamily="Helvetica Light"
+                            FontSize="20"
+                            HorizontalOptions="Center"
+                            Text="Genre 5"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Margin="5,0,10,50">
+                        <Frame
+                            Padding="1"
+                            BackgroundColor="Black"
+                            BorderColor="LightGray"
+                            CornerRadius="5"
+                            HasShadow="True"
+                            HeightRequest="110">
+                            <Frame
+                                Padding="0"
+                                BackgroundColor="Black"
+                                BorderColor="Black"
+                                CornerRadius="5">
+                                <StackLayout>
+                                    <Image Opacity="0.4" />
+                                </StackLayout>
+                            </Frame>
+                        </Frame>
+
+                        <Label
+                            Margin="0,-75,0,0"
+                            FontFamily="Helvetica Light"
+                            FontSize="20"
+                            HorizontalOptions="Center"
+                            Text="Genre 6"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
