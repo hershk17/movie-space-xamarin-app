@@ -26,12 +26,16 @@ namespace DPS926_A2
         private const string topRatedURL = domainURL + "movie/top_rated";
         private const string upcomingURL = domainURL + "movie/upcoming";
 
+        private const string genresURL = domainURL + "genre/movie/list";
+        private const string genreMoviesURL = domainURL + "discover/movie";
+
         private const string queryParam = "&query=";
         private const string apiParam = "?api_key=";
+        private const string genresParam = "&with_genres=";
 
         public NetworkingManager() { }
 
-        private async Task<ObservableCollection<Models.Movie>> GetMovies(string type, bool highQualityImages = false, string query = null)
+        private async Task<ObservableCollection<Models.Movie>> GetMovies(string type, bool highQualityImages = false, string query = null, int genre = -1)
         {
             ObservableCollection<Models.Movie> movieCollection = new ObservableCollection<Models.Movie>();
 
@@ -58,6 +62,10 @@ namespace DPS926_A2
                     break;
                 case "search":
                     completeURL = searchURL + apiParam + key + queryParam + query;
+                    maxCnt = 20;
+                    break;
+                case "genre":
+                    completeURL = genreMoviesURL + apiParam + key + genresParam + genre;
                     maxCnt = 20;
                     break;
                 default:
@@ -97,6 +105,44 @@ namespace DPS926_A2
             return movieCollection;
         }
 
+        public async Task<Models.MovieDetails> GetMovieDetails(int id)
+        {
+            string completeURL = detailsURL + id + apiParam + key;
+            var response = await client.GetAsync(completeURL);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return new Models.MovieDetails();
+            }
+            else
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+                var movieDetails = JsonConvert.DeserializeObject<Models.MovieDetails>(jsonString.ToString());
+                return movieDetails;
+            }
+        }
+
+        public async Task<List<Models.Genre>> GetGenres()
+        {
+            string completeURL = genresURL + apiParam + key;
+            var response = await client.GetAsync(completeURL);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return new List<Models.Genre>();
+            }
+            else
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+                var dic = JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonString);
+
+                var array = dic.ElementAt(0).Value;
+                var result = JsonConvert.DeserializeObject<List<Models.Genre>>(array.ToString());
+
+                return result;
+            }
+        }
+
         public async Task<ObservableCollection<Models.Movie>> GetNowPlayingMovies()
         {
             return await GetMovies("nowPlaying", true);
@@ -119,24 +165,12 @@ namespace DPS926_A2
 
         public async Task<ObservableCollection<Models.Movie>> SearchMovie(string query)
         {
-            return await GetMovies("search", true, query);
+            return await GetMovies("search", false, query);
         }
 
-        public async Task<Models.MovieDetails> GetMovieDetails(int id)
+        public async Task<ObservableCollection<Models.Movie>> GetMoviesOfGenre(int genreId)
         {
-            string completeURL = detailsURL + id + apiParam + key;
-            var response = await client.GetAsync(completeURL);
-
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                return new Models.MovieDetails();
-            }
-            else
-            {
-                var jsonString = await response.Content.ReadAsStringAsync();
-                var movieDetails = JsonConvert.DeserializeObject<Models.MovieDetails>(jsonString.ToString());
-                return movieDetails;
-            }
+            return await GetMovies("genre", false, null, genreId);
         }
     }
 }

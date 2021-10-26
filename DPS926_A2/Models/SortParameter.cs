@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DPS926_A2.Models
 {
-    class SortParameter
+    public class SortParameter
     {
         private string _name;
         public string name {

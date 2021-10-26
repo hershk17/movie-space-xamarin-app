@@ -49,13 +49,14 @@
                             </StackLayout>
                         </StackLayout>
 
-                        <StackLayout
+                        <Grid
                             x:Name="UserMovieInfo"
-                            HorizontalOptions="CenterAndExpand"
-                            Orientation="Horizontal">
+                            Margin="10,0,10,0"
+                            HorizontalOptions="CenterAndExpand">
                             <Picker
                                 x:Name="StatusPicker"
                                 Title="Watch Status"
+                                Grid.Column="0"
                                 FontFamily="Helvetica"
                                 FontSize="18"
                                 HorizontalTextAlignment="Center"
@@ -65,13 +66,14 @@
                             <Picker
                                 x:Name="RatingPicker"
                                 Title="Rate this movie"
+                                Grid.Column="1"
                                 FontFamily="Helvetica"
                                 FontSize="18"
                                 HorizontalTextAlignment="Center"
                                 SelectedIndexChanged="ratingUpdated"
                                 TextColor="WhiteSmoke"
                                 WidthRequest="175" />
-                        </StackLayout>
+                        </Grid>
 
                         <Button
                             x:Name="AddToList"

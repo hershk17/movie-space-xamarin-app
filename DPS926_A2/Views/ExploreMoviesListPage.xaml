@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DPS926_A2.Views.ExploreMoviesListPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DPS926_A2.Controls">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#191919">
+
+            <Grid Margin="15,5,15,5" HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Label
+                    x:Name="ResultsLabel"
+                    Grid.Column="0"
+                    FontFamily="Helvetica Light"
+                    FontSize="16"
+                    HorizontalOptions="Start"
+                    TextColor="LightGray"
+                    VerticalOptions="Center" />
+                <StackLayout
+                    x:Name="SortInfo"
+                    Grid.Column="1"
+                    HorizontalOptions="End"
+                    Orientation="Horizontal">
+                    <Label
+                        FontFamily="Helvetica Light"
+                        Text="Sort by"
+                        TextColor="LightGray"
+                        VerticalOptions="Center" />
+                    <Button
+                        x:Name="SortButton"
+                        Grid.Column="1"
+                        BackgroundColor="#363636"
+                        BorderColor="DimGray"
+                        BorderWidth="1"
+                        Clicked="SortButton_Clicked"
+                        CornerRadius="5"
+                        VerticalOptions="Center" />
+                </StackLayout>
+            </Grid>
+
+            <ListView
+                x:Name="movieList"
+                Margin="15,0,15,0"
+                BackgroundColor="Gray"
+                HorizontalOptions="Center"
+                ItemSelected="movieList_ItemSelected"
+                RowHeight="180"
+                SelectionMode="Single"
+                VerticalOptions="Start">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <local:DetailedMovieCard
+                            Title="{Binding title}"
+                            Poster="{Binding poster_path}"
+                            ReleaseDate="{Binding release_date}"
+                            VoteAverage="{Binding vote_average, StringFormat='{0}★'}"
+                            VoteCount="{Binding vote_count, StringFormat='({0})'}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout
+    x:Class="DPS926_A2.Controls.GenreCard"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Margin="20,0,0,50"
+    HorizontalOptions="Start">
+    <StackLayout.GestureRecognizers>
+        <TapGestureRecognizer Tapped="Genre_Tapped" />
+    </StackLayout.GestureRecognizers>
+    <Frame
+        Padding="0"
+        BackgroundColor="#282828"
+        CornerRadius="10"
+        HasShadow="True"
+        HeightRequest="100"
+        HorizontalOptions="Center"
+        WidthRequest="175">
+        <StackLayout>
+            <Image Opacity="0.4" Source="{Binding GenreBackdrop}" />
+        </StackLayout>
+    </Frame>
+
+    <Label
+        Margin="0,-70,0,0"
+        FontFamily="Helvetica Light"
+        FontSize="20"
+        HorizontalOptions="Center"
+        Text="{Binding GenreName}"
+        TextColor="White"
+        VerticalOptions="Center" />
+</StackLayout>

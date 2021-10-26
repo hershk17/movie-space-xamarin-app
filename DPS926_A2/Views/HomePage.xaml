@@ -3,13 +3,13 @@
     x:Class="DPS926_A2.Views.HomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DPS926_A2.Controls"
     Title="{Binding Title}">
 
     <ScrollView>
         <StackLayout BackgroundColor="#191919">
             <CarouselView
                 x:Name="NowPlayingMoviesBackdrops"
-                Margin="0,0,0,0"
                 BackgroundColor="Black"
                 HeightRequest="420"
                 IsSwipeEnabled="False">
@@ -26,7 +26,10 @@
                 </CarouselView.ItemTemplate>
             </CarouselView>
 
-            <StackLayout Margin="20,-390,0,260" Orientation="Horizontal">
+            <StackLayout
+                Margin="20,-390,20,260"
+                HorizontalOptions="Start"
+                Orientation="Horizontal">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -36,12 +39,12 @@
                         Grid.Column="0"
                         FontFamily="Helvetica Bold"
                         FontSize="44"
-                        Text="Now&lt;br&gt;Playing"
+                        Text="Now Playing"
                         TextColor="WhiteSmoke"
                         TextType="Html" />
                     <ImageButton
                         Grid.Column="1"
-                        Margin="0,8,-24,0"
+                        Margin="0,8,0,0"
                         Padding="15"
                         Aspect="AspectFit"
                         BackgroundColor="Transparent"
@@ -55,7 +58,7 @@
 
             <CollectionView
                 x:Name="NowPlayingMoviesPosters"
-                Margin="20,-250,0,00"
+                Margin="20,-250,0,0"
                 BackgroundColor="Transparent"
                 HeightRequest="402"
                 ItemsLayout="HorizontalList"
@@ -76,13 +79,27 @@
                                 WidthRequest="270">
                                 <Image Source="{Binding poster_path}" />
                             </Frame>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="Transparent" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="Transparent" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
             <Label
-                Margin="20,20,0,0"
+                Margin="20,30,0,0"
                 FontFamily="Helvetica Bold"
                 FontSize="26"
                 Text="Trending"
@@ -90,25 +107,13 @@
 
             <CollectionView
                 x:Name="TrendingMovies"
-                Margin="0,0,0,0"
                 HeightRequest="220"
                 ItemsLayout="HorizontalList"
                 SelectionChanged="TrendingMovies_MovieSelected"
                 SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Orientation="Vertical">
-                            <Frame
-                                Margin="20,0,0,0"
-                                Padding="0"
-                                BackgroundColor="#191919"
-                                BorderColor="Black"
-                                CornerRadius="10"
-                                HeightRequest="210"
-                                WidthRequest="141">
-                                <Image Source="{Binding poster_path}" />
-                            </Frame>
-                        </StackLayout>
+                        <local:SimpleMovieCard MoviePoster="{Binding poster_path}" />
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
@@ -122,25 +127,13 @@
 
             <CollectionView
                 x:Name="TopRatedMovies"
-                Margin="0,0,0,0"
                 HeightRequest="220"
                 ItemsLayout="HorizontalList"
                 SelectionChanged="TopRatedMovies_ItemSelected"
                 SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Orientation="Vertical">
-                            <Frame
-                                Margin="20,0,0,0"
-                                Padding="0"
-                                BackgroundColor="#191919"
-                                BorderColor="Black"
-                                CornerRadius="10"
-                                HeightRequest="210"
-                                WidthRequest="141">
-                                <Image Source="{Binding poster_path}" />
-                            </Frame>
-                        </StackLayout>
+                        <local:SimpleMovieCard MoviePoster="{Binding poster_path}" />
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
@@ -154,25 +147,13 @@
 
             <CollectionView
                 x:Name="UpcomingMovies"
-                Margin="0,0,0,0"
                 HeightRequest="220"
                 ItemsLayout="HorizontalList"
                 SelectionChanged="UpcomingMovies_MovieSelected"
                 SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Orientation="Vertical">
-                            <Frame
-                                Margin="20,0,0,0"
-                                Padding="0"
-                                BackgroundColor="#191919"
-                                BorderColor="Black"
-                                CornerRadius="10"
-                                HeightRequest="210"
-                                WidthRequest="141">
-                                <Image Source="{Binding poster_path}" />
-                            </Frame>
-                        </StackLayout>
+                        <local:SimpleMovieCard MoviePoster="{Binding poster_path}" />
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
