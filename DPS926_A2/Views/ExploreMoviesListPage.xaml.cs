@@ -19,10 +19,10 @@ namespace DPS926_A2.Views
         NetworkingManager manager = new NetworkingManager();
         MovieListManager movieListManager = new MovieListManager();
 
-        public ExploreMoviesListPage(ObservableCollection<Models.Movie> movies, string genreName)
+        public ExploreMoviesListPage(ObservableCollection<Models.Movie> movies, string category = "recommendations")
         {
             InitializeComponent();
-            Title = genreName;
+            Title = category;
 
             ResultsLabel.Text = movies.Count.ToString() + " results shown.";
             SortButton.Text = movieListManager.currentlyActiveParam;

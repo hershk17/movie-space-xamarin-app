@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace DPS926_A2.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MovieDetailsPage : ContentPage
     {
+        NetworkingManager manager = new NetworkingManager();
+
         Models.MovieDetails currMovie = new Models.MovieDetails();
         
         string[] Ratings = { "10★", "9★", "8★", "7★", "6★", "5★", "4★", "3★", "2★", "1★" };
@@ -127,6 +130,25 @@ namespace DPS926_A2.Views
         {
             currMovie.userRating = Ratings[RatingPicker.SelectedIndex]; 
             App.Database.UpdateMovie(currMovie);
+        }
+
+        public async Task ShareText(string text)
+        {
+            await Share.RequestAsync(new ShareTextRequest
+            {
+                Text = text,
+                Title = "Share Movie"
+            });
+        }
+
+        private async void ShareButton_Clicked(object sender, EventArgs e)
+        {
+            await ShareText("Hey! Check out this movie I found: " + currMovie.title + (!string.IsNullOrWhiteSpace(currMovie.homepage) ? (" [" + currMovie.homepage + "] ") : " "));
+        }
+
+        private async void PlayButton_Clicked(object sender, EventArgs e)
+        {
+            await Launcher.OpenAsync(new Uri("https://www.youtube.com/watch?v=" + await manager.GetTrailer(currMovie.id)));
         }
     }
 }

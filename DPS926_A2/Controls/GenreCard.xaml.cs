@@ -28,11 +28,11 @@ namespace DPS926_A2.Controls
             set { SetValue(GenreNameProperty, value); }
         }
 
-        public static readonly BindableProperty GenreBackdropProperty = BindableProperty.Create("GenreBackdrop", typeof(string), typeof(GenreCard));
-        public string GenreBackdrop
+        public static readonly BindableProperty GenreBackgroundProperty = BindableProperty.Create("GenreBackground", typeof(string), typeof(GenreCard));
+        public string GenreBackground
         {
-            get { return (string)GetValue(GenreBackdropProperty); }
-            set { SetValue(GenreBackdropProperty, value); }
+            get { return (string)GetValue(GenreBackgroundProperty); }
+            set { SetValue(GenreBackgroundProperty, value); }
         }
 
         public GenreCard()

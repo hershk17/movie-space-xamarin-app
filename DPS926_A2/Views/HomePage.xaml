@@ -26,10 +26,7 @@
                 </CarouselView.ItemTemplate>
             </CarouselView>
 
-            <StackLayout
-                Margin="20,-390,20,260"
-                HorizontalOptions="Start"
-                Orientation="Horizontal">
+            <StackLayout Margin="20,-390,20,270" HorizontalOptions="CenterAndExpand">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -39,7 +36,7 @@
                         Grid.Column="0"
                         FontFamily="Helvetica Bold"
                         FontSize="44"
-                        Text="Now Playing"
+                        Text="Now&lt;br&gt;Playing"
                         TextColor="WhiteSmoke"
                         TextType="Html" />
                     <ImageButton
@@ -77,7 +74,7 @@
                                 HasShadow="True"
                                 HeightRequest="402"
                                 WidthRequest="270">
-                                <Image Source="{Binding poster_path}" />
+                                <Image Aspect="AspectFill" Source="{Binding poster_path}" />
                             </Frame>
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="CommonStates">

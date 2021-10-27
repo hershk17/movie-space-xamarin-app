@@ -2,6 +2,8 @@
 <resources>
   <style name="MainTheme" parent="MainTheme.Base">
     <item name="colorPrimaryDark">@android:color/transparent</item>
+    <item name="android:colorBackground">#121212</item>
+    <item name="android:windowNoTitle">true</item>
     <item name="android:navigationBarColor">#121212</item>
     <item name="android:colorPressedHighlight">@color/ListViewSelected</item>
     <item name="android:colorLongPressedHighlight">@color/ListViewHighlighted</item>

@@ -14,7 +14,7 @@
         CornerRadius="10"
         HeightRequest="210"
         WidthRequest="141">
-        <Image x:Name="poster" />
+        <Image x:Name="poster" Aspect="AspectFill" />
     </Frame>
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroup x:Name="CommonStates">

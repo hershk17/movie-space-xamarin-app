@@ -2,6 +2,39 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v11.0": {
+      "Com.Airbnb.Android.Lottie/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Square.OkIO": "1.17.4",
+          "Xamarin.AndroidX.AppCompat": "1.1.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/Lottie.Android.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid10.0/Lottie.Android.dll": {}
+        }
+      },
+      "Com.Airbnb.Xamarin.Forms.Lottie/4.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Com.Airbnb.Android.Lottie": "4.1.0",
+          "Xamarin.AndroidX.AppCompat": "1.1.0",
+          "Xamarin.Forms": "4.5.0.657"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/Lottie.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid10.0/Lottie.Forms.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -97,6 +130,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
+      "Square.OkIO/1.17.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid44/Square.OkIO.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid44/Square.OkIO.dll": {}
         }
       },
       "System.Buffers/4.4.0": {
@@ -1120,6 +1165,62 @@
     }
   },
   "libraries": {
+    "Com.Airbnb.Android.Lottie/4.1.0": {
+      "sha512": "Y71yRMXmC9e7HI8Oh2C7o9plhzGOJElzJE+S1fK+kboYg6BcEPVYLhcPaWhC9eBgclUbPEpXR8cFIIuTTYNd3g==",
+      "type": "package",
+      "path": "com.airbnb.android.lottie/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "com.airbnb.android.lottie.4.1.0.nupkg.sha512",
+        "com.airbnb.android.lottie.nuspec",
+        "icon.png",
+        "lib/monoandroid10.0/Lottie.Android.dll",
+        "lib/monoandroid10.0/Lottie.Android.pdb",
+        "lib/monoandroid10.0/Lottie.Android.xml",
+        "readme.txt"
+      ]
+    },
+    "Com.Airbnb.Xamarin.Forms.Lottie/4.0.11": {
+      "sha512": "YwomwOTLwZC3OBuDzPF7eGegCrxNsELd096fGgIurNgCooCOt4LAhlB7G77Qi5SlkTimWYPB3jMpHQoANQpkkg==",
+      "type": "package",
+      "path": "com.airbnb.xamarin.forms.lottie/4.0.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "com.airbnb.xamarin.forms.lottie.4.0.11.nupkg.sha512",
+        "com.airbnb.xamarin.forms.lottie.nuspec",
+        "icon.png",
+        "lib/monoandroid10.0/Lottie.Forms.dll",
+        "lib/monoandroid10.0/Lottie.Forms.pdb",
+        "lib/monoandroid10.0/Lottie.Forms.xml",
+        "lib/net472/Lottie.Forms.dll",
+        "lib/net472/Lottie.Forms.pdb",
+        "lib/net472/Lottie.Forms.xml",
+        "lib/netcoreapp3.1/Lottie.Forms.dll",
+        "lib/netcoreapp3.1/Lottie.Forms.pdb",
+        "lib/netcoreapp3.1/Lottie.Forms.xml",
+        "lib/netstandard2.0/Lottie.Forms.dll",
+        "lib/netstandard2.0/Lottie.Forms.pdb",
+        "lib/netstandard2.0/Lottie.Forms.xml",
+        "lib/tizen40/Lottie.Forms.dll",
+        "lib/tizen40/Lottie.Forms.pdb",
+        "lib/tizen40/Lottie.Forms.xml",
+        "lib/uap10.0.17763/Lottie.Forms.dll",
+        "lib/uap10.0.17763/Lottie.Forms.pdb",
+        "lib/uap10.0.17763/Lottie.Forms.pri",
+        "lib/uap10.0.17763/Lottie.Forms.xml",
+        "lib/xamarinios10/Lottie.Forms.dll",
+        "lib/xamarinios10/Lottie.Forms.pdb",
+        "lib/xamarinios10/Lottie.Forms.xml",
+        "lib/xamarinmac20/Lottie.Forms.dll",
+        "lib/xamarinmac20/Lottie.Forms.pdb",
+        "lib/xamarinmac20/Lottie.Forms.xml",
+        "readme.txt"
+      ]
+    },
     "Newtonsoft.Json/13.0.1": {
       "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
@@ -1273,6 +1374,18 @@
         "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll",
         "sqlitepclraw.provider.e_sqlite3.2.0.4.nupkg.sha512",
         "sqlitepclraw.provider.e_sqlite3.nuspec"
+      ]
+    },
+    "Square.OkIO/1.17.4": {
+      "sha512": "5yvgtYo52ZYThVjpfI2tZrCs1gmShrO3D+LNhmsYHT5a9hP6CUb/fxLgT0SW4hOcjgYcBwJEo5aaKrOSHv8Jeg==",
+      "type": "package",
+      "path": "square.okio/1.17.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid44/Square.OkIO.dll",
+        "square.okio.1.17.4.nupkg.sha512",
+        "square.okio.nuspec"
       ]
     },
     "System.Buffers/4.4.0": {
@@ -2494,6 +2607,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v11.0": [
+      "Com.Airbnb.Xamarin.Forms.Lottie >= 4.0.11",
       "DPS926_A2 >= 1.0.0",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012"
@@ -2541,6 +2655,10 @@
     "frameworks": {
       "monoandroid11.0": {
         "dependencies": {
+          "Com.Airbnb.Xamarin.Forms.Lottie": {
+            "target": "Package",
+            "version": "[4.0.11, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.6.1, )"

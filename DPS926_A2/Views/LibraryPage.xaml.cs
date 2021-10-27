@@ -18,7 +18,7 @@ namespace DPS926_A2.Views
         {
             InitializeComponent();
 
-            Title = "Your library";
+            Shell.SetNavBarIsVisible(this, false);
         }
 
         protected override void OnAppearing()

@@ -10,8 +10,9 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-  <application android:label="DPS926_A2.Android" android:theme="@style/MainTheme" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true" android:extractNativeLibs="true">
-    <activity android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:icon="@mipmap/icon" android:label="A2" android:theme="@style/MainTheme" android:name="crc64eaeefe11e251be32.MainActivity">
+  <application android:label="DPS926_A2.Android" android:theme="@style/MainTheme" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/astronaut_icon" android:debuggable="true" android:extractNativeLibs="true">
+    <activity android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:icon="@drawable/astronaut_icon" android:label="Movie Space" android:theme="@style/MainTheme" android:name="crc64eaeefe11e251be32.MainActivity" />
+    <activity android:icon="@drawable/astronaut_icon" android:label="Movie Space" android:noHistory="true" android:theme="@style/MainTheme" android:name="crc64eaeefe11e251be32.SplashActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
