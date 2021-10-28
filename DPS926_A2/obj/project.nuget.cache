@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0rTZAjML3TX18l34fFSaZPrv7Z0cx8RR1RXXz2D2nP8SAULo998euunD51gJSvUvXm9+B2y3vwQJZmAUIJiP6g==",
+  "dgSpecHash": "dUNsgmFtGLYtAvFpq5HvhWbgacO5+2612ILGMxo1hmTgr8pcuYzUJbcUshy6HTQDmg0nPn+CsFzXmVCiyvgkbA==",
   "success": true,
   "projectFilePath": "C:\\Users\\hersh\\source\\repos\\DPS926_A2\\DPS926_A2\\DPS926_A2.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,7 @@
     "C:\\Users\\hersh\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\hersh\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\hersh\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\hersh\\.nuget\\packages\\xamarin.forms\\5.0.0.2125\\xamarin.forms.5.0.0.2125.nupkg.sha512"
+    "C:\\Users\\hersh\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
   "logs": []
 }

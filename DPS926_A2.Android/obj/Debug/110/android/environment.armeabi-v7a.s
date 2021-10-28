@@ -23,8 +23,8 @@
 	.section	.rodata.env.str.1,"aMS",%progbits,1
 	.type	.L.env.str.1, %object
 .L.env.str.1:
-	.asciz	"com.companyname.dps926_a2"
-	.size	.L.env.str.1, 26
+	.asciz	"com.dps926.moviespace"
+	.size	.L.env.str.1, 22
 	.section	.data.application_config,"aw",%progbits
 	.type	application_config, %object
 	.p2align	2
@@ -92,7 +92,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",%progbits,1
 	.type	.L.env.str.8, %object
 .L.env.str.8:
-	.asciz	"93527651-c93a-4808-bd21-0a776cdd23ed"
+	.asciz	"4d7a56c2-d4e9-47a3-8d48-e12136fa2d8c"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",%progbits,1
 	.type	.L.env.str.9, %object
