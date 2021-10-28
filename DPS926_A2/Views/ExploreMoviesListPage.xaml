@@ -14,7 +14,7 @@
                 <Label
                     x:Name="ResultsLabel"
                     Grid.Column="0"
-                    FontFamily="Helvetica Light"
+                    FontFamily="Helvetica Oblique"
                     FontSize="16"
                     HorizontalOptions="Start"
                     TextColor="LightGray"
@@ -25,7 +25,7 @@
                     HorizontalOptions="End"
                     Orientation="Horizontal">
                     <Label
-                        FontFamily="Helvetica Light"
+                        FontFamily="Helvetica Bold"
                         Text="Sort by"
                         TextColor="LightGray"
                         VerticalOptions="Center" />

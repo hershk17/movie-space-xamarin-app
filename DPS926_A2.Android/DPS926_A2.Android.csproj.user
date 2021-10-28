@@ -3,7 +3,7 @@
   <PropertyGroup>
     <SelectedDevice>Samsung SM-G965F</SelectedDevice>
     <ActiveDebugProfile>Samsung SM-G965F</ActiveDebugProfile>
-    <DefaultDevice>pixel_3_xl_pie_9_0_-_api_28</DefaultDevice>
+    <DefaultDevice>tablet_m-dpi_10_1in_pie_9_0_-_api_28</DefaultDevice>
     <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>

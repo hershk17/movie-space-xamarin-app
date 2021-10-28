@@ -24,7 +24,7 @@ namespace DPS926_A2.Views
             InitializeComponent();
             Title = category;
 
-            ResultsLabel.Text = movies.Count.ToString() + " results shown.";
+            ResultsLabel.Text = movies.Count.ToString() + " result(s) shown.";
             SortButton.Text = movieListManager.currentlyActiveParam;
 
             movieListManager.MovieResults = movies;
