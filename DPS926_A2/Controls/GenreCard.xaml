@@ -3,29 +3,25 @@
     x:Class="DPS926_A2.Controls.GenreCard"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Margin="20,0,0,50"
+    Margin="20,0,0,70"
     HorizontalOptions="Start">
     <StackLayout.GestureRecognizers>
         <TapGestureRecognizer Tapped="Genre_Tapped" />
     </StackLayout.GestureRecognizers>
-    <Frame
+    <ImageButton
         Padding="0"
-        BackgroundColor="#282828"
-        CornerRadius="10"
-        HasShadow="True"
+        BackgroundColor="{Binding GenreBackground}"
+        CornerRadius="5"
         HeightRequest="100"
         HorizontalOptions="Center"
-        WidthRequest="175">
-        <StackLayout>
-            <Image Opacity="0.4" Source="{Binding GenreBackdrop}" />
-        </StackLayout>
-    </Frame>
+        IsEnabled="False"
+        WidthRequest="175" />
 
     <Label
-        Margin="0,-70,0,0"
-        FontFamily="Helvetica Light"
+        Margin="15,-90,0,0"
+        FontFamily="Helvetica Bold"
         FontSize="20"
-        HorizontalOptions="Center"
+        HorizontalOptions="Start"
         Text="{Binding GenreName}"
         TextColor="White"
         VerticalOptions="Center" />

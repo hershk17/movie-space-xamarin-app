@@ -8,15 +8,7 @@
     <ContentView>
         <ScrollView>
             <StackLayout BackgroundColor="#191919">
-                <Frame
-                    Margin="0,0,0,-390"
-                    Padding="0"
-                    HasShadow="True"
-                    HeightRequest="390"
-                    Opacity="0.3">
-                    <Image Aspect="AspectFill" Source="recommendations_backdrop.jpeg" />
-                </Frame>
-                <Grid Margin="20,33,10,30">
+                <Grid Margin="20,40,10,30">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
@@ -42,27 +34,44 @@
                         VerticalOptions="Center" />
                 </Grid>
 
-                <StackLayout Margin="20,0,20,20">
-                    <ImageButton
-                        BackgroundColor="#282828"
-                        BorderColor="Gray"
-                        BorderWidth="1"
-                        Clicked="SearchButton_Clicked"
-                        CornerRadius="10"
-                        HeightRequest="200" />
-
-                    <Label
-                        Margin="0,-125,0,0"
-                        FontFamily="Helvetica Light"
-                        FontSize="28"
-                        HorizontalOptions="Center"
-                        Text="Recommendations"
-                        TextColor="White"
-                        VerticalOptions="Center" />
+                <StackLayout Margin="20,0,20,0">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Recommendations_Clicked" />
+                    </StackLayout.GestureRecognizers>
+                    <Frame
+                        Padding="2"
+                        BackgroundColor="Black"
+                        BorderColor="DarkGray"
+                        CornerRadius="5"
+                        HeightRequest="209"
+                        IsEnabled="False">
+                        <ImageButton
+                            Aspect="AspectFill"
+                            Opacity="0.3"
+                            Source="recommendations_backdrop.jpeg" />
+                    </Frame>
                 </StackLayout>
 
                 <Label
-                    Margin="20,120,0,10"
+                    Margin="40,-190,0,0"
+                    FontFamily="Helvetica Bold"
+                    FontSize="32"
+                    HorizontalOptions="Start"
+                    Text="Recommendations"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Margin="0,-10,40,50"
+                    FontFamily="Helvetica Bold"
+                    FontSize="64"
+                    HorizontalOptions="End"
+                    Text="❱"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Margin="20,0,0,10"
                     FontFamily="Helvetica Bold"
                     FontSize="20"
                     HorizontalOptions="Start"
@@ -74,7 +83,80 @@
                     x:Name="GenreList"
                     FlowDirection="LeftToRight"
                     VerticalOptions="StartAndExpand"
-                    Wrap="Wrap" />
+                    Wrap="Wrap">
+                    <local:GenreCard
+                        GenreBackground="#c72c41"
+                        GenreId="28"
+                        GenreName="Action" />
+                    <local:GenreCard
+                        GenreBackground="#45ada8"
+                        GenreId="12"
+                        GenreName="Adventure" />
+                    <local:GenreCard
+                        GenreBackground="#194a50"
+                        GenreId="16"
+                        GenreName="Animation" />
+                    <local:GenreCard
+                        GenreBackground="#f99e4c"
+                        GenreId="35"
+                        GenreName="Comedy" />
+                    <local:GenreCard
+                        GenreBackground="#6C5B7B"
+                        GenreId="80"
+                        GenreName="Crime" />
+                    <local:GenreCard
+                        GenreBackground="#344E5C"
+                        GenreId="99"
+                        GenreName="Documentary" />
+                    <local:GenreCard
+                        GenreBackground="#f99e4c"
+                        GenreId="18"
+                        GenreName="Drama" />
+                    <local:GenreCard
+                        GenreBackground="#ff8c94"
+                        GenreId="10751"
+                        GenreName="Family" />
+                    <local:GenreCard
+                        GenreBackground="#45ada8"
+                        GenreId="14"
+                        GenreName="Fantasy" />
+                    <local:GenreCard
+                        GenreBackground="#8f614b"
+                        GenreId="36"
+                        GenreName="History" />
+                    <local:GenreCard
+                        GenreBackground="#6C5B7B"
+                        GenreId="27"
+                        GenreName="Horror" />
+                    <local:GenreCard
+                        GenreBackground="#f99e4c"
+                        GenreId="10402"
+                        GenreName="Music" />
+                    <local:GenreCard
+                        GenreBackground="#194a50"
+                        GenreId="9648"
+                        GenreName="Mystery" />
+                    <local:GenreCard
+                        GenreBackground="#ff8c94"
+                        GenreId="10749"
+                        GenreName="Romance" />
+                    <local:GenreCard
+                        GenreBackground="#45ada8"
+                        GenreId="878"
+                        GenreName="Sci-Fi" />
+                    <local:GenreCard
+                        GenreBackground="#c72c41"
+                        GenreId="53"
+                        GenreName="Thriller" />
+                    <local:GenreCard
+                        GenreBackground="#8f614b"
+                        GenreId="10752"
+                        GenreName="War" />
+                    <local:GenreCard
+                        GenreBackground="#d37556"
+                        GenreId="37"
+                        GenreName="Western" />
+                </FlexLayout>
 
             </StackLayout>
         </ScrollView>

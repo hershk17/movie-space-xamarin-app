@@ -6,90 +6,104 @@
     xmlns:local="clr-namespace:DPS926_A2.Controls"
     BackgroundColor="#191919">
     <ContentPage.Content>
-        <ListView
-            x:Name="myList"
-            Margin="15,0,15,0"
-            BackgroundColor="Gray"
-            HorizontalOptions="Center"
-            ItemSelected="MovieSelected"
-            RowHeight="200"
-            SelectionMode="Single"
-            VerticalOptions="Start">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid BackgroundColor="#151515">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="110" />
-                                <RowDefinition Height="25" />
-                                <RowDefinition Height="25" />
-                            </Grid.RowDefinitions>
+        <StackLayout>
+            <StackLayout Margin="20,40,10,10">
+                <Label
+                    FontFamily="Helvetica Bold"
+                    FontSize="44"
+                    HorizontalOptions="Start"
+                    Text="Library"
+                    TextColor="WhiteSmoke"
+                    TextType="Html"
+                    VerticalOptions="Center" />
+            </StackLayout>
 
-                            <Frame
-                                Grid.Row="0"
-                                Grid.RowSpan="4"
-                                Grid.Column="0"
-                                Margin="0,15,0,15"
-                                Padding="0"
-                                BackgroundColor="White"
-                                BorderColor="Black"
-                                CornerRadius="5"
-                                HorizontalOptions="Start"
-                                VerticalOptions="Center">
-                                <Image Aspect="AspectFit" Source="{Binding poster_path, StringFormat='https://image.tmdb.org/t/p/w780{0}'}" />
-                            </Frame>
+            <ListView
+                x:Name="myList"
+                Margin="20,0,15,0"
+                BackgroundColor="#191919"
+                HorizontalOptions="FillAndExpand"
+                ItemSelected="MovieSelected"
+                RowHeight="200"
+                SelectionMode="Single"
+                VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid BackgroundColor="#191919" HorizontalOptions="StartAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="110" />
+                                    <RowDefinition Height="25" />
+                                    <RowDefinition Height="25" />
+                                </Grid.RowDefinitions>
 
-                            <Label
-                                Grid.Row="0"
-                                Grid.Column="1"
-                                Grid.ColumnSpan="2"
-                                Padding="5,10,0,0"
-                                FontFamily="Helvetica Bold"
-                                FontSize="20"
-                                Text="{Binding title}"
-                                TextColor="WhiteSmoke"
-                                VerticalOptions="Start" />
+                                <Frame
+                                    Grid.Row="0"
+                                    Grid.RowSpan="4"
+                                    Grid.Column="0"
+                                    Padding="0"
+                                    BackgroundColor="White"
+                                    BorderColor="Black"
+                                    CornerRadius="5"
+                                    HeightRequest="170"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    WidthRequest="112">
+                                    <Image Aspect="AspectFill" Source="{Binding poster_path, StringFormat='https://image.tmdb.org/t/p/w780{0}'}" />
+                                </Frame>
 
-                            <StackLayout
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                Grid.ColumnSpan="2"
-                                Padding="5,0,0,0"
-                                Orientation="Horizontal"
-                                VerticalOptions="End">
                                 <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="2"
+                                    Margin="10,15,0,0"
                                     FontFamily="Helvetica Bold"
-                                    FontSize="16"
-                                    Text="Status: "
-                                    TextColor="WhiteSmoke" />
+                                    FontSize="20"
+                                    HorizontalOptions="Start"
+                                    Text="{Binding title}"
+                                    TextColor="WhiteSmoke"
+                                    VerticalOptions="Start" />
+
                                 <Label
-                                    FontFamily="Helvetica"
-                                    FontSize="16"
-                                    Text="{Binding userWatchStatus}"
-                                    TextColor="WhiteSmoke" />
-                            </StackLayout>
-                            <StackLayout
-                                Grid.Row="2"
-                                Grid.Column="1"
-                                Grid.ColumnSpan="2"
-                                Padding="5,0,0,0"
-                                Orientation="Horizontal"
-                                VerticalOptions="Start">
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="2"
+                                    Margin="10,0,0,0"
+                                    TextColor="WhiteSmoke"
+                                    VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span
+                                                FontFamily="Helvetica"
+                                                FontSize="16"
+                                                Text="Status: " />
+                                            <Span FontFamily="Helvetica Light" Text="{Binding userWatchStatus}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
                                 <Label
-                                    FontFamily="Helvetica Bold"
-                                    FontSize="16"
-                                    Text="Score: "
-                                    TextColor="WhiteSmoke" />
-                                <Label
-                                    FontFamily="Helvetica"
-                                    FontSize="16"
-                                    Text="{Binding userRating}"
-                                    TextColor="WhiteSmoke" />
-                            </StackLayout>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="2"
+                                    Margin="10,0,0,0"
+                                    TextColor="WhiteSmoke"
+                                    VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span
+                                                FontFamily="Helvetica"
+                                                FontSize="16"
+                                                Text="Score: " />
+                                            <Span FontFamily="Helvetica Light" Text="{Binding userRating}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

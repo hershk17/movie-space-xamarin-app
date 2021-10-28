@@ -45,9 +45,9 @@ namespace DPS926_A2
             moviesList.Add(movie);
         }
 
-        public async void UpdateMovie(Models.MovieDetails movie)
+        public async void UpdateMovie(Models.MovieDetails updatedMovie)
         {
-            await _database.UpdateAsync(movie);
+            await _database.UpdateAsync(updatedMovie);
         }
 
         public async void DeleteMovie(Models.MovieDetails movie)

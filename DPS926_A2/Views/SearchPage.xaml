@@ -56,13 +56,13 @@
         <ListView
             x:Name="movieList"
             Margin="15,0,15,0"
-            BackgroundColor="Gray"
-            HorizontalOptions="Center"
+            BackgroundColor="#242424"
+            HorizontalOptions="FillAndExpand"
             IsVisible="false"
             ItemSelected="movieList_ItemSelected"
             RowHeight="180"
             SelectionMode="Single"
-            VerticalOptions="Start">
+            VerticalOptions="FillAndExpand">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <local:DetailedMovieCard

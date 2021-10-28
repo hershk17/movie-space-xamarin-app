@@ -19,7 +19,7 @@ namespace DPS926_A2.Models
         public double popularity { set; get; }
         public string release_date { set; get; }
 
-        public string _userWatchStatus;
+        public string _userWatchStatus = "";
         public string userWatchStatus
         {
             get { return _userWatchStatus; }
@@ -33,7 +33,7 @@ namespace DPS926_A2.Models
             }
         }
 
-        public string _userRating;
+        public string _userRating= "";
         public string userRating
         {
             get { return _userRating; }

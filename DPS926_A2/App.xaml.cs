@@ -37,7 +37,6 @@ namespace DPS926_A2
             }
         }
 
-
         public App()
         {
             InitializeComponent();

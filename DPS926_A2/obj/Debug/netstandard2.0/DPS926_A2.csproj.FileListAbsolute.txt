@@ -5,6 +5,11 @@ C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\bin\Debug\netstandard2.0\DPS926_
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\DPS926_A2.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\Controls\DetailedMovieCard.xaml.g.cs
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\Controls\GenreCard.xaml.g.cs
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\Controls\SimpleMovieCard.xaml.g.cs
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\Views\ExploreMoviesListPage.xaml.g.cs
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\Views\ExplorePage.xaml.g.cs
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\Views\LibraryPage.xaml.g.cs
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\Views\MovieDetailsPage.xaml.g.cs
@@ -17,8 +22,3 @@ C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\DPS926_
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\ref\DPS926_A2.dll
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\DPS926_A2.pdb
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\DPS926_A2.csproj.AssemblyReference.cache
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\Views\ExplorePage.xaml.g.cs
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\Controls\GenreCard.xaml.g.cs
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\Controls\SimpleMovieCard.xaml.g.cs
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\Controls\DetailedMovieCard.xaml.g.cs
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Debug\netstandard2.0\Views\ExploreMoviesListPage.xaml.g.cs
