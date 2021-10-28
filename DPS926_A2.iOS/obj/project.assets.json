@@ -276,7 +276,7 @@
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2125",
+          "Xamarin.Forms": "5.0.0.2196",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -562,7 +562,7 @@
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2125",
+          "Xamarin.Forms": "5.0.0.2196",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -848,7 +848,7 @@
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2125",
+          "Xamarin.Forms": "5.0.0.2196",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -1134,7 +1134,7 @@
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2125",
+          "Xamarin.Forms": "5.0.0.2196",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -1770,7 +1770,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2125 to 5.0.0.2012. Reference the package directly from the project to select a different version. \r\n DPS926_A2.iOS -> DPS926_A2 -> Xamarin.Forms (>= 5.0.0.2125) \r\n DPS926_A2.iOS -> Xamarin.Forms (>= 5.0.0.2012)",
+      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2196 to 5.0.0.2012. Reference the package directly from the project to select a different version. \r\n DPS926_A2.iOS -> DPS926_A2 -> Xamarin.Forms (>= 5.0.0.2196) \r\n DPS926_A2.iOS -> Xamarin.Forms (>= 5.0.0.2012)",
       "libraryId": "Xamarin.Forms",
       "targetGraphs": [
         "Xamarin.iOS,Version=v1.0",

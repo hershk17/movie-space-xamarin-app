@@ -2,6 +2,7 @@ C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\bin\Release\netstandard2.0\DPS92
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\bin\Release\netstandard2.0\DPS926_A2.dll
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\bin\Release\netstandard2.0\ref\DPS926_A2.dll
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\bin\Release\netstandard2.0\DPS926_A2.pdb
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Release\netstandard2.0\DPS926_A2.csproj.AssemblyReference.cache
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Release\netstandard2.0\DPS926_A2.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Release\netstandard2.0\App.xaml.g.cs
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2\obj\Release\netstandard2.0\AppShell.xaml.g.cs
