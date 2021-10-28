@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,7 @@ namespace DPS926_A2.Views
             base.OnAppearing();
 
             App.Database.SetUserLibraryData();
+
             myList.ItemsSource = App.Database.moviesList;
         }
 

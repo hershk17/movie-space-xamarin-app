@@ -55,7 +55,7 @@
 
             <CollectionView
                 x:Name="NowPlayingMoviesPosters"
-                Margin="20,-250,0,0"
+                Margin="0,-250,0,0"
                 BackgroundColor="Transparent"
                 HeightRequest="402"
                 ItemsLayout="HorizontalList"
@@ -64,7 +64,7 @@
                 SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout>
+                        <StackLayout Padding="20,0,0,0">
                             <Frame
                                 Margin="0,0,60,0"
                                 Padding="0"

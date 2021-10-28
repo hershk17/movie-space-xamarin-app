@@ -20,17 +20,17 @@
 
             <ListView
                 x:Name="myList"
-                Margin="15,0,15,0"
+                Margin="20,0,15,0"
                 BackgroundColor="#191919"
-                HorizontalOptions="Center"
+                HorizontalOptions="FillAndExpand"
                 ItemSelected="MovieSelected"
                 RowHeight="200"
                 SelectionMode="Single"
-                VerticalOptions="Start">
+                VerticalOptions="FillAndExpand">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid BackgroundColor="#191919">
+                            <Grid BackgroundColor="#191919" HorizontalOptions="StartAndExpand">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="110" />
                                     <RowDefinition Height="25" />
@@ -41,63 +41,64 @@
                                     Grid.Row="0"
                                     Grid.RowSpan="4"
                                     Grid.Column="0"
-                                    Margin="0,15,0,15"
                                     Padding="0"
                                     BackgroundColor="White"
                                     BorderColor="Black"
                                     CornerRadius="5"
-                                    HorizontalOptions="Start"
-                                    VerticalOptions="Center">
-                                    <Image Aspect="AspectFit" Source="{Binding poster_path, StringFormat='https://image.tmdb.org/t/p/w780{0}'}" />
+                                    HeightRequest="170"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    WidthRequest="112">
+                                    <Image Aspect="AspectFill" Source="{Binding poster_path, StringFormat='https://image.tmdb.org/t/p/w780{0}'}" />
                                 </Frame>
 
                                 <Label
                                     Grid.Row="0"
                                     Grid.Column="1"
                                     Grid.ColumnSpan="2"
-                                    Padding="5,15,0,0"
+                                    Margin="10,15,0,0"
                                     FontFamily="Helvetica Bold"
                                     FontSize="20"
+                                    HorizontalOptions="Start"
                                     Text="{Binding title}"
                                     TextColor="WhiteSmoke"
                                     VerticalOptions="Start" />
 
-                                <StackLayout
+                                <Label
                                     Grid.Row="1"
                                     Grid.Column="1"
                                     Grid.ColumnSpan="2"
-                                    Padding="5,0,0,0"
-                                    Orientation="Horizontal"
-                                    VerticalOptions="End">
-                                    <Label
-                                        FontFamily="Helvetica Bold"
-                                        FontSize="16"
-                                        Text="Status: "
-                                        TextColor="WhiteSmoke" />
-                                    <Label
-                                        FontFamily="Helvetica"
-                                        FontSize="16"
-                                        Text="{Binding userWatchStatus}"
-                                        TextColor="WhiteSmoke" />
-                                </StackLayout>
-                                <StackLayout
+                                    Margin="10,0,0,0"
+                                    TextColor="WhiteSmoke"
+                                    VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span
+                                                FontFamily="Helvetica"
+                                                FontSize="16"
+                                                Text="Status: " />
+                                            <Span FontFamily="Helvetica Light" Text="{Binding userWatchStatus}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label
                                     Grid.Row="2"
                                     Grid.Column="1"
                                     Grid.ColumnSpan="2"
-                                    Padding="5,0,0,0"
-                                    Orientation="Horizontal"
-                                    VerticalOptions="Start">
-                                    <Label
-                                        FontFamily="Helvetica Bold"
-                                        FontSize="16"
-                                        Text="Score: "
-                                        TextColor="WhiteSmoke" />
-                                    <Label
-                                        FontFamily="Helvetica"
-                                        FontSize="16"
-                                        Text="{Binding userRating}"
-                                        TextColor="WhiteSmoke" />
-                                </StackLayout>
+                                    Margin="10,0,0,0"
+                                    TextColor="WhiteSmoke"
+                                    VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span
+                                                FontFamily="Helvetica"
+                                                FontSize="16"
+                                                Text="Score: " />
+                                            <Span FontFamily="Helvetica Light" Text="{Binding userRating}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

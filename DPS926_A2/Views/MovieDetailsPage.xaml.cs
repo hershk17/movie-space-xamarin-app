@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using System.Windows.Input;
 
 namespace DPS926_A2.Views
 {
@@ -21,6 +22,8 @@ namespace DPS926_A2.Views
         string[] Ratings = { "10★", "9★", "8★", "7★", "6★", "5★", "4★", "3★", "2★", "1★" };
         string[] Statuses = { "Watching", "Completed", "Plan to Watch" };
 
+        public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
+
         public MovieDetailsPage(Models.MovieDetails movieDetails)
         {
             InitializeComponent();
@@ -28,6 +31,8 @@ namespace DPS926_A2.Views
 
             currMovie = movieDetails;
             SetMovieDetails();
+
+            BindingContext = this;
         }
 
         private void SetMovieDetails()
@@ -47,63 +52,49 @@ namespace DPS926_A2.Views
             title.Text = currMovie.title;
             audience_rating.Text = currMovie.vote_average.ToString() + "★ (" + currMovie.vote_count.ToString() + ")";
             overview.Text = currMovie.overview;
-            GenreList.ItemsSource = currMovie.genres;
+            BindableLayout.SetItemsSource(GenreList, currMovie.genres);
             release_date.Text = DateTime.Parse(currMovie.release_date).ToLongDateString();
             TimeSpan timespan = TimeSpan.FromMinutes(currMovie.runtime);
             runtime.Text = (timespan.Hours + "hr " + timespan.Minutes + "mins").ToString();
             language.Text = currMovie.original_language;
-            budget.Text = currMovie.budget.ToString("C", CultureInfo.CreateSpecificCulture("en-US"));
-            revenue.Text = currMovie.revenue.ToString("C", CultureInfo.CreateSpecificCulture("en-US"));
-            popularity.Text = currMovie.popularity.ToString();
-            homepage.Text = currMovie.homepage;
-
-            UpdateUserMovieInfo();
-        }
-
-        private void UpdateUserMovieInfo()
-        {
-            StatusPicker.SelectedIndex = Array.IndexOf(Statuses, currMovie.userWatchStatus);
-            if (!string.IsNullOrWhiteSpace(currMovie.userRating))
-            {
-                RatingPicker.SelectedIndex = Array.IndexOf(Ratings, currMovie.userRating);
-            }
+            budget.Text = currMovie.budget.ToString("C0", CultureInfo.CreateSpecificCulture("en-US"));
+            revenue.Text = currMovie.revenue.ToString("C0", CultureInfo.CreateSpecificCulture("en-US"));
+            homepage.CommandParameter = currMovie.homepage;
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
-            bool result = App.Database.moviesList.FirstOrDefault(movie => movie.id == currMovie.id) == null;
-            if(!result)
+            Models.Movie result = App.Database.moviesList.FirstOrDefault(movie => movie.id == currMovie.id);
+
+            if (result != null)
             {
-                UpdateUserMovieInfo();
+                if (!string.IsNullOrWhiteSpace(result.userWatchStatus))
+                {
+                    StatusPicker.SelectedIndex = Array.IndexOf(Statuses, result.userWatchStatus);
+                }
+                if (!string.IsNullOrWhiteSpace(result.userRating))
+                {
+                    RatingPicker.SelectedIndex = Array.IndexOf(Ratings, result.userRating);
+                }
             }
-            AddToList.IsVisible = result;
-            UserMovieInfo.IsVisible = !result;
-            DelFromList.IsVisible = !result;
+
+            AddToList.IsVisible = result == null;
+            UserMovieInfo.IsVisible = result != null;
+            DelFromList.IsVisible = result != null;
         }
 
-        protected override void OnDisappearing()
+        private void addToListClicked(object sender, EventArgs e)
         {
-            base.OnDisappearing();
+            StatusPicker.SelectedIndex = -1;
+            RatingPicker.SelectedIndex = -1;
 
-            Navigation.PopAsync();
-        }
+            AddToList.IsVisible = false;
+            UserMovieInfo.IsVisible = true;
+            DelFromList.IsVisible = true;
 
-        private async void addToListClicked(object sender, EventArgs e)
-        {
-            string choice = await DisplayActionSheet("Add to a List", "Cancel", null, Statuses);
-
-            if(!(string.IsNullOrWhiteSpace(choice) || choice == "Cancel")) {
-                App.Database.AddMovie(currMovie);
-
-                currMovie.userWatchStatus = choice;
-                UpdateUserMovieInfo();
-
-                AddToList.IsVisible = false;
-                UserMovieInfo.IsVisible = true;
-                DelFromList.IsVisible = true;
-            }
+            App.Database.AddMovie(currMovie);
         }
 
         private async void remFromListClicked(object sender, EventArgs e)
@@ -112,23 +103,38 @@ namespace DPS926_A2.Views
 
             if (confirmed)
             {
-                App.Database.DeleteMovie(currMovie);
+                StatusPicker.SelectedIndex = -1;
+                RatingPicker.SelectedIndex = -1;
 
                 AddToList.IsVisible = true;
                 UserMovieInfo.IsVisible = false;
                 DelFromList.IsVisible = false;
+
+                App.Database.DeleteMovie(currMovie);
             }
         }
 
         private void statusUpdated(object sender, EventArgs e)
         {
-            currMovie.userWatchStatus = Statuses[StatusPicker.SelectedIndex];
+            if (StatusPicker.SelectedIndex != -1) currMovie.userWatchStatus = Statuses[StatusPicker.SelectedIndex];
+            else currMovie.userWatchStatus = "";
+
+            Models.Movie MovieToUpdate = App.Database.moviesList.FirstOrDefault(mov => mov.id == currMovie.id);
+            if (MovieToUpdate != null) MovieToUpdate.userWatchStatus = currMovie.userWatchStatus;
+
             App.Database.UpdateMovie(currMovie);
         }
 
         private void ratingUpdated(object sender, EventArgs e)
         {
-            currMovie.userRating = Ratings[RatingPicker.SelectedIndex]; 
+            if (RatingPicker.SelectedIndex != -1)
+                currMovie.userRating = Ratings[RatingPicker.SelectedIndex];
+            else
+                currMovie.userRating = "";
+
+            Models.Movie MovieToUpdate = App.Database.moviesList.FirstOrDefault(mov => mov.id == currMovie.id);
+            if (MovieToUpdate != null) MovieToUpdate.userRating = currMovie.userRating;
+
             App.Database.UpdateMovie(currMovie);
         }
 
@@ -149,6 +155,11 @@ namespace DPS926_A2.Views
         private async void PlayButton_Clicked(object sender, EventArgs e)
         {
             await Launcher.OpenAsync(new Uri("https://www.youtube.com/watch?v=" + await manager.GetTrailer(currMovie.id)));
+        }
+
+        private async void MovieGenre_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ExploreMoviesListPage(await manager.GetMoviesOfGenre(int.Parse((sender as StackLayout).ClassId)), (sender as StackLayout).AutomationId));
         }
     }
 }

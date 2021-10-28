@@ -12,8 +12,16 @@
                     Aspect="AspectFill"
                     HeightRequest="270"
                     Opacity="0.8" />
+                <ImageButton
+                    Margin="0,-90,20,10"
+                    BackgroundColor="#212121"
+                    Clicked="PlayButton_Clicked"
+                    CornerRadius="100"
+                    HeightRequest="48"
+                    HorizontalOptions="End"
+                    Source="play.png"
+                    WidthRequest="48" />
                 <Frame
-                    Margin="0,-35,0,0"
                     BackgroundColor="#212121"
                     BorderColor="Transparent"
                     CornerRadius="30"
@@ -47,22 +55,13 @@
                                     FontSize="16"
                                     TextColor="WhiteSmoke" />
                             </StackLayout>
-
                         </StackLayout>
 
-                        <StackLayout Margin="0,-230,0,150" HorizontalOptions="End">
+                        <StackLayout Margin="0,-50,10,10" HorizontalOptions="End">
                             <ImageButton
-                                BackgroundColor="Transparent"
-                                Clicked="PlayButton_Clicked"
-                                HeightRequest="48"
-                                Source="play.png"
-                                WidthRequest="48" />
-                        </StackLayout>
-
-                        <StackLayout Margin="0,-30,10,20" HorizontalOptions="End">
-                            <ImageButton
-                                BackgroundColor="Transparent"
+                                BackgroundColor="Black"
                                 Clicked="ShareButton_Clicked"
+                                CornerRadius="100"
                                 HeightRequest="32"
                                 Source="share3.png"
                                 WidthRequest="32" />
@@ -70,7 +69,7 @@
 
                         <Grid
                             x:Name="UserMovieInfo"
-                            Margin="10,10,10,0"
+                            Margin="10,20,10,0"
                             HorizontalOptions="CenterAndExpand">
                             <Picker
                                 x:Name="StatusPicker"
@@ -131,26 +130,28 @@
                                 Margin="10,0,0,0"
                                 FontFamily="Helvetica Bold"
                                 FontSize="24"
-                                Text="Genre"
+                                Text="Genres"
                                 TextColor="WhiteSmoke" />
 
-                            <CollectionView
+                            <FlexLayout
                                 x:Name="GenreList"
                                 Margin="10,0,0,0"
                                 BackgroundColor="Transparent"
-                                HeightRequest="50"
-                                ItemsLayout="HorizontalList"
-                                SelectionMode="None">
-                                <CollectionView.ItemTemplate>
+                                FlowDirection="LeftToRight"
+                                VerticalOptions="StartAndExpand"
+                                Wrap="Wrap">
+                                <BindableLayout.ItemTemplate>
                                     <DataTemplate>
-                                        <StackLayout>
+                                        <StackLayout AutomationId="{Binding name}" ClassId="{Binding id}">
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="MovieGenre_Tapped" />
+                                            </StackLayout.GestureRecognizers>
                                             <Frame
-                                                Margin="0,0,6,0"
+                                                Margin="0,0,8,10"
                                                 Padding="20,10,20,10"
                                                 BackgroundColor="#222222"
                                                 BorderColor="DimGray"
-                                                CornerRadius="20"
-                                                HasShadow="True"
+                                                CornerRadius="30"
                                                 VerticalOptions="Center">
                                                 <Label
                                                     FontFamily="Helvetica Light"
@@ -160,99 +161,82 @@
                                             </Frame>
                                         </StackLayout>
                                     </DataTemplate>
-                                </CollectionView.ItemTemplate>
-                            </CollectionView>
+                                </BindableLayout.ItemTemplate>
+                            </FlexLayout>
                         </StackLayout>
 
-                        <StackLayout Margin="0,5,0,10">
+                        <StackLayout Margin="10,0,0,10">
                             <Label
-                                Margin="10,0,0,0"
                                 FontFamily="Helvetica Bold"
                                 FontSize="24"
                                 Text="Additional Info"
                                 TextColor="WhiteSmoke" />
 
-                            <StackLayout Margin="10,0,0,0" Orientation="Horizontal">
-                                <Label
-                                    FontFamily="Helvetica"
-                                    Text="Release Date: "
-                                    TextColor="WhiteSmoke"
-                                    VerticalOptions="Center" />
-                                <Label
-                                    x:Name="release_date"
-                                    FontFamily="Helvetica Light"
-                                    TextColor="WhiteSmoke"
-                                    VerticalOptions="Center" />
-                            </StackLayout>
-                            <StackLayout Margin="10,0,0,0" Orientation="Horizontal">
-                                <Label
-                                    FontFamily="Helvetica"
-                                    Text="Budget: "
-                                    TextColor="WhiteSmoke"
-                                    VerticalOptions="Center" />
-                                <Label
-                                    x:Name="budget"
-                                    FontFamily="Helvetica Light"
-                                    TextColor="WhiteSmoke"
-                                    VerticalOptions="Center" />
-                            </StackLayout>
-                            <StackLayout Margin="10,0,0,0" Orientation="Horizontal">
-                                <Label
-                                    FontFamily="Helvetica"
-                                    Text="Revenue: "
-                                    TextColor="WhiteSmoke"
-                                    VerticalOptions="Center" />
-                                <Label
-                                    x:Name="revenue"
-                                    FontFamily="Helvetica Light"
-                                    TextColor="WhiteSmoke"
-                                    VerticalOptions="Center" />
-                            </StackLayout>
-                            <StackLayout Margin="10,0,0,0" Orientation="Horizontal">
-                                <Label
-                                    FontFamily="Helvetica"
-                                    Text="Runtime: "
-                                    TextColor="WhiteSmoke"
-                                    VerticalOptions="Center" />
-                                <Label
-                                    x:Name="runtime"
-                                    FontFamily="Helvetica Light"
-                                    TextColor="WhiteSmoke"
-                                    VerticalOptions="Center" />
-                            </StackLayout>
-                            <StackLayout Margin="10,0,0,0" Orientation="Horizontal">
-                                <Label
-                                    FontFamily="Helvetica"
-                                    Text="Language: "
-                                    TextColor="WhiteSmoke"
-                                    VerticalOptions="Center" />
-                                <Label
-                                    x:Name="language"
-                                    FontFamily="Helvetica Light"
-                                    TextColor="WhiteSmoke"
-                                    VerticalOptions="Center" />
-                            </StackLayout>
+                            <Label TextColor="WhiteSmoke" VerticalOptions="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span FontFamily="Helvetica" Text="Release Date: " />
+                                        <Span x:Name="release_date" FontFamily="Helvetica Light" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
 
-                            <StackLayout Margin="10,0,0,0" Orientation="Horizontal">
-                                <Label
-                                    FontFamily="Helvetica"
-                                    Text="Popularity: "
-                                    TextColor="WhiteSmoke"
-                                    VerticalOptions="Center" />
-                                <Label
-                                    x:Name="popularity"
-                                    FontFamily="Helvetica Light"
-                                    TextColor="WhiteSmoke"
-                                    VerticalOptions="Center" />
-                            </StackLayout>
+                            <Label TextColor="WhiteSmoke" VerticalOptions="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span FontFamily="Helvetica" Text="Runtime: " />
+                                        <Span x:Name="runtime" FontFamily="Helvetica Light" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label TextColor="WhiteSmoke" VerticalOptions="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span FontFamily="Helvetica" Text="Budget: " />
+                                        <Span x:Name="budget" FontFamily="Helvetica Light" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label TextColor="WhiteSmoke" VerticalOptions="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span FontFamily="Helvetica" Text="Revenue: " />
+                                        <Span x:Name="revenue" FontFamily="Helvetica Light" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label TextColor="WhiteSmoke" VerticalOptions="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span FontFamily="Helvetica" Text="Language: " />
+                                        <Span x:Name="language" FontFamily="Helvetica Light" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
 
                             <Label
-                                x:Name="homepage"
-                                Margin="10,0,0,0"
+                                Margin="0,30,0,0"
                                 FontFamily="Helvetica Light"
-                                TextColor="DeepSkyBlue"
-                                TextDecorations="Underline"
-                                VerticalOptions="Center" />
+                                TextColor="WhiteSmoke"
+                                VerticalOptions="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Click " />
+                                        <Span
+                                            Text="here"
+                                            TextColor="DeepSkyBlue"
+                                            TextDecorations="Underline">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer x:Name="homepage" Command="{Binding TapCommand}" />
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                        <Span Text=" to vist the webpage." />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
                         </StackLayout>
                     </StackLayout>
                 </Frame>

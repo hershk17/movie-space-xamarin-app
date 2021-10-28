@@ -3,17 +3,18 @@
     x:Class="DPS926_A2.Controls.DetailedMovieCard"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <Grid BackgroundColor="#242424">
+    <Grid BackgroundColor="#242424" HorizontalOptions="StartAndExpand">
         <Frame
             Grid.Row="0"
             Grid.RowSpan="4"
             Grid.Column="0"
+            Margin="0,0,15,0"
             Padding="0"
             BackgroundColor="White"
             BorderColor="Black"
             CornerRadius="5"
             HeightRequest="155"
-            HorizontalOptions="Start"
+            HorizontalOptions="Center"
             VerticalOptions="Center"
             WidthRequest="105">
             <Image x:Name="poster" Aspect="AspectFill" />

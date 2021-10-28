@@ -19,7 +19,7 @@ namespace DPS926_A2.Views
         NetworkingManager manager = new NetworkingManager();
         MovieListManager movieListManager = new MovieListManager();
 
-        public ExploreMoviesListPage(ObservableCollection<Models.Movie> movies, string category = "recommendations")
+        public ExploreMoviesListPage(ObservableCollection<Models.Movie> movies, string category = "Recommendations")
         {
             InitializeComponent();
             Title = category;

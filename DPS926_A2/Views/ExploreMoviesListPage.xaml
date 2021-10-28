@@ -5,9 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:DPS926_A2.Controls">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#191919">
+        <StackLayout BackgroundColor="#242424">
 
-            <Grid Margin="15,5,15,5" HorizontalOptions="Center">
+            <Grid Margin="15,10,15,5" HorizontalOptions="Center">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
@@ -44,12 +44,12 @@
             <ListView
                 x:Name="movieList"
                 Margin="15,0,15,0"
-                BackgroundColor="Gray"
-                HorizontalOptions="Center"
+                BackgroundColor="#242424"
+                HorizontalOptions="FillAndExpand"
                 ItemSelected="movieList_ItemSelected"
                 RowHeight="180"
                 SelectionMode="Single"
-                VerticalOptions="Start">
+                VerticalOptions="FillAndExpand">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <local:DetailedMovieCard

@@ -10,10 +10,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DPS926_A2.Droid
 {
-    [Activity(Label = "Movie Space", Icon = "@drawable/astronaut_icon", Theme = "@style/MainTheme", MainLauncher = true, NoHistory = true)]
+    [Activity(Label = "Movie Space", Icon = "@drawable/main_icon", Theme = "@style/MainTheme", MainLauncher = true, NoHistory = true)]
     public class SplashActivity : Activity, Animator.IAnimatorListener
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -31,15 +32,21 @@ namespace DPS926_A2.Droid
 
         public void OnAnimationEnd(Animator animation)
         {
-            StartActivity(new Intent(Application.Context, typeof(MainActivity)));
         }
 
         public void OnAnimationRepeat(Animator animation)
         {
         }
 
-        public void OnAnimationStart(Animator animation)
+        public async void OnAnimationStart(Animator animation)
         {
+            await SimulateStartUp();
+        }
+
+        async Task SimulateStartUp()
+        {
+            await Task.Delay(TimeSpan.FromMilliseconds(2650));
+            StartActivity(new Intent(Application.Context, typeof(MainActivity)));
         }
     }
 }

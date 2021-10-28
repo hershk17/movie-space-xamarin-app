@@ -196,7 +196,7 @@ namespace DPS926_A2
                 var array = dic.ElementAt(1).Value;
                 List<Models.Video> result = JsonConvert.DeserializeObject<List<Models.Video>>(array.ToString());
 
-                return (result.FirstOrDefault(video => (video.official && video.site == "YouTube" && video.type == "Trailer"))).key;
+                return result.FirstOrDefault(video => video.official && video.site == "YouTube" && video.type == "Trailer").key;
             }
         }
 

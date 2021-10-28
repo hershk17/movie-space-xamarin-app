@@ -38,30 +38,40 @@
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Recommendations_Clicked" />
                     </StackLayout.GestureRecognizers>
-                    <ImageButton
-                        Aspect="AspectFill"
-                        BackgroundColor="#191919"
-                        BorderColor="DimGray"
-                        BorderWidth="1"
-                        Clicked="Recommendations_Clicked"
+                    <Frame
+                        Padding="2"
+                        BackgroundColor="Black"
+                        BorderColor="DarkGray"
                         CornerRadius="5"
-                        HeightRequest="200"
-                        IsEnabled="False"
-                        Opacity="0.2"
-                        Source="recommendations_backdrop.jpeg" />
+                        HeightRequest="209"
+                        IsEnabled="False">
+                        <ImageButton
+                            Aspect="AspectFill"
+                            Opacity="0.3"
+                            Source="recommendations_backdrop.jpeg" />
+                    </Frame>
                 </StackLayout>
 
                 <Label
                     Margin="40,-190,0,0"
                     FontFamily="Helvetica Bold"
                     FontSize="32"
-                    Text="Recommendations"
                     HorizontalOptions="Start"
+                    Text="Recommendations"
                     TextColor="White"
                     VerticalOptions="Center" />
 
                 <Label
-                    Margin="20,160,0,10"
+                    Margin="0,-10,40,50"
+                    FontFamily="Helvetica Bold"
+                    FontSize="64"
+                    HorizontalOptions="End"
+                    Text="❱"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Margin="20,0,0,10"
                     FontFamily="Helvetica Bold"
                     FontSize="20"
                     HorizontalOptions="Start"
@@ -75,7 +85,7 @@
                     VerticalOptions="StartAndExpand"
                     Wrap="Wrap">
                     <local:GenreCard
-                        GenreBackground="#FF4E50"
+                        GenreBackground="#c72c41"
                         GenreId="28"
                         GenreName="Action" />
                     <local:GenreCard
@@ -83,15 +93,15 @@
                         GenreId="12"
                         GenreName="Adventure" />
                     <local:GenreCard
-                        GenreBackground="#355C7D"
+                        GenreBackground="#194a50"
                         GenreId="16"
                         GenreName="Animation" />
                     <local:GenreCard
-                        GenreBackground="#d8b26e"
+                        GenreBackground="#f99e4c"
                         GenreId="35"
                         GenreName="Comedy" />
                     <local:GenreCard
-                        GenreBackground="#d37556"
+                        GenreBackground="#6C5B7B"
                         GenreId="80"
                         GenreName="Crime" />
                     <local:GenreCard
@@ -99,19 +109,19 @@
                         GenreId="99"
                         GenreName="Documentary" />
                     <local:GenreCard
-                        GenreBackground="#344E5C"
+                        GenreBackground="#f99e4c"
                         GenreId="18"
                         GenreName="Drama" />
                     <local:GenreCard
-                        GenreBackground="#d8b26e"
+                        GenreBackground="#ff8c94"
                         GenreId="10751"
                         GenreName="Family" />
                     <local:GenreCard
-                        GenreBackground="#355C7D"
+                        GenreBackground="#45ada8"
                         GenreId="14"
                         GenreName="Fantasy" />
                     <local:GenreCard
-                        GenreBackground="#d37556"
+                        GenreBackground="#8f614b"
                         GenreId="36"
                         GenreName="History" />
                     <local:GenreCard
@@ -119,7 +129,7 @@
                         GenreId="27"
                         GenreName="Horror" />
                     <local:GenreCard
-                        GenreBackground="#45ada8"
+                        GenreBackground="#f99e4c"
                         GenreId="10402"
                         GenreName="Music" />
                     <local:GenreCard
@@ -127,15 +137,15 @@
                         GenreId="9648"
                         GenreName="Mystery" />
                     <local:GenreCard
-                        GenreBackground="#DDA5B6"
+                        GenreBackground="#ff8c94"
                         GenreId="10749"
                         GenreName="Romance" />
                     <local:GenreCard
-                        GenreBackground="#355C7D"
+                        GenreBackground="#45ada8"
                         GenreId="878"
                         GenreName="Sci-Fi" />
                     <local:GenreCard
-                        GenreBackground="#6C5B7B"
+                        GenreBackground="#c72c41"
                         GenreId="53"
                         GenreName="Thriller" />
                     <local:GenreCard

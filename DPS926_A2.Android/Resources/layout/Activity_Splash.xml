@@ -7,8 +7,9 @@
         android:id="@+id/animation_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:lottie_fileName="splash.json"
+        app:lottie_fileName="splash_v2.json"
         app:lottie_autoPlay="true"
+        app:lottie_loop="true"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
