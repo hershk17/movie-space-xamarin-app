@@ -14,7 +14,7 @@
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2125",
+          "Xamarin.Forms": "5.0.0.2196",
           "sqlite-net-pcl": "1.8.116"
         },
         "runtime": {
@@ -154,19 +154,19 @@
           }
         }
       },
-      "Xamarin.Forms/5.0.0.2125": {
+      "Xamarin.Forms/5.0.0.2196": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.747"
+            "fileVersion": "5.0.0.786"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.747"
+            "fileVersion": "5.0.0.786"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.747"
+            "fileVersion": "5.0.0.786"
           }
         }
       }
@@ -283,12 +283,12 @@
       "path": "xamarin.essentials/1.7.0",
       "hashPath": "xamarin.essentials.1.7.0.nupkg.sha512"
     },
-    "Xamarin.Forms/5.0.0.2125": {
+    "Xamarin.Forms/5.0.0.2196": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oP4eEx8SkEId/azXqzBpl9MA5kjn8izMoQImV3c/M4Q8NLSERWWNJkymrSylaIIO4l0zQIofYjwQoHmtaQ0dFQ==",
-      "path": "xamarin.forms/5.0.0.2125",
-      "hashPath": "xamarin.forms.5.0.0.2125.nupkg.sha512"
+      "sha512": "sha512-zSXDiZukojtEBmZKUUG1yYBwlB9tI8JLPkc6n+Sm1PAX01QyzErWE9AaFJgP7usyoGHn92l4HnQF7A+/MPI6VA==",
+      "path": "xamarin.forms/5.0.0.2196",
+      "hashPath": "xamarin.forms.5.0.0.2196.nupkg.sha512"
     }
   }
 }
