@@ -51,7 +51,7 @@
                                 <Label
                                     x:Name="audience_rating"
                                     Margin="15,0,0,0"
-                                    FontFamily="Helvetica Light"
+                                    FontFamily="Helvetica"
                                     FontSize="16"
                                     TextColor="WhiteSmoke" />
                             </StackLayout>
@@ -75,7 +75,9 @@
                                 x:Name="StatusPicker"
                                 Title="Watch Status"
                                 Grid.Column="0"
+                                Grid.ColumnSpan="2"
                                 FontFamily="Helvetica"
+                                TitleColor="WhiteSmoke"
                                 FontSize="18"
                                 HorizontalTextAlignment="Center"
                                 SelectedIndexChanged="statusUpdated"
@@ -84,8 +86,9 @@
                             <Picker
                                 x:Name="RatingPicker"
                                 Title="Rate this movie"
-                                Grid.Column="1"
+                                Grid.Column="2"
                                 FontFamily="Helvetica"
+                                TitleColor="WhiteSmoke"
                                 FontSize="18"
                                 HorizontalTextAlignment="Center"
                                 SelectedIndexChanged="ratingUpdated"
@@ -120,8 +123,8 @@
                             <Label
                                 x:Name="overview"
                                 Margin="10,0,0,0"
-                                FontFamily="Helvetica Light"
-                                FontSize="16"
+                                FontFamily="Helvetica"
+                                FontSize="18"
                                 TextColor="WhiteSmoke" />
                         </StackLayout>
 
@@ -154,7 +157,7 @@
                                                 CornerRadius="30"
                                                 VerticalOptions="Center">
                                                 <Label
-                                                    FontFamily="Helvetica Light"
+                                                    FontFamily="Helvetica"
                                                     FontSize="18"
                                                     Text="{Binding name}"
                                                     TextColor="WhiteSmoke" />
@@ -175,8 +178,14 @@
                             <Label TextColor="WhiteSmoke" VerticalOptions="Center">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span FontFamily="Helvetica" Text="Release Date: " />
-                                        <Span x:Name="release_date" FontFamily="Helvetica Light" />
+                                        <Span
+                                            FontFamily="Helvetica"
+                                            FontSize="16"
+                                            Text="Release Date: " />
+                                        <Span
+                                            x:Name="release_date"
+                                            FontFamily="Helvetica"
+                                            FontSize="16" />
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
@@ -184,8 +193,14 @@
                             <Label TextColor="WhiteSmoke" VerticalOptions="Center">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span FontFamily="Helvetica" Text="Runtime: " />
-                                        <Span x:Name="runtime" FontFamily="Helvetica Light" />
+                                        <Span
+                                            FontFamily="Helvetica"
+                                            FontSize="16"
+                                            Text="Runtime: " />
+                                        <Span
+                                            x:Name="runtime"
+                                            FontFamily="Helvetica"
+                                            FontSize="16" />
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
@@ -193,8 +208,14 @@
                             <Label TextColor="WhiteSmoke" VerticalOptions="Center">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span FontFamily="Helvetica" Text="Budget: " />
-                                        <Span x:Name="budget" FontFamily="Helvetica Light" />
+                                        <Span
+                                            FontFamily="Helvetica"
+                                            FontSize="16"
+                                            Text="Budget: " />
+                                        <Span
+                                            x:Name="budget"
+                                            FontFamily="Helvetica"
+                                            FontSize="16" />
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
@@ -202,8 +223,14 @@
                             <Label TextColor="WhiteSmoke" VerticalOptions="Center">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span FontFamily="Helvetica" Text="Revenue: " />
-                                        <Span x:Name="revenue" FontFamily="Helvetica Light" />
+                                        <Span
+                                            FontFamily="Helvetica"
+                                            FontSize="16"
+                                            Text="Revenue: " />
+                                        <Span
+                                            x:Name="revenue"
+                                            FontFamily="Helvetica"
+                                            FontSize="16" />
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
@@ -211,15 +238,22 @@
                             <Label TextColor="WhiteSmoke" VerticalOptions="Center">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span FontFamily="Helvetica" Text="Language: " />
-                                        <Span x:Name="language" FontFamily="Helvetica Light" />
+                                        <Span
+                                            FontFamily="Helvetica"
+                                            FontSize="16"
+                                            Text="Language: " />
+                                        <Span
+                                            x:Name="language"
+                                            FontFamily="Helvetica"
+                                            FontSize="16" />
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
 
                             <Label
                                 Margin="0,30,0,0"
-                                FontFamily="Helvetica Light"
+                                FontFamily="Helvetica"
+                                FontSize="15"
                                 TextColor="WhiteSmoke"
                                 VerticalOptions="Center">
                                 <Label.FormattedText>

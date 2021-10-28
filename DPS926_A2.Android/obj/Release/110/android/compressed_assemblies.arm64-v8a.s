@@ -17,7 +17,7 @@
 
 	/* 1: DPS926_A2.dll */
 	/* uncompressed_file_size */
-	.word	1724416
+	.word	1726976
 	/* loaded */
 	.byte	0
 	/* data */

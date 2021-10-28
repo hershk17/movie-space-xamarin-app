@@ -443,14 +443,6 @@ C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\stamp\_Gen
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\res\drawable\main_icon.png
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\bin\Debug\com.dps926.moviespace.apk
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\bin\Debug\com.dps926.moviespace.aab
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\bin\Debug\com.dps926.moviespace-Signed.aab
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\bin\Debug\com.dps926.moviespace-Signed.apk
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\bin\Debug\com.dps926.moviespace-Signed.apk.idsig
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\bin\com.dps926.moviespace.apk
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\bin\com.dps926.moviespace.aab
-C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\bin\com.dps926.moviespace.apks
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\src\com\dps926\moviespace\R.java
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\typemaps.x86.s
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\typemaps.x86_64.s
@@ -628,3 +620,12 @@ C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\sr
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\src\mono\com\google\android\material\textfield\TextInputLayout_OnEditTextAttachedListenerImplementor.java
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\src\mono\com\google\android\material\textfield\TextInputLayout_OnEndIconChangedListenerImplementor.java
 C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\src\xamarin\essentials\fileProvider.java
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\bin\Debug\com.dps.moviespace.apk
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\bin\Debug\com.dps.moviespace.aab
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\bin\Debug\com.dps.moviespace-Signed.aab
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\bin\Debug\com.dps.moviespace-Signed.apk
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\bin\Debug\com.dps.moviespace-Signed.apk.idsig
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\bin\com.dps.moviespace.apk
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\bin\com.dps.moviespace.aab
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\bin\com.dps.moviespace.apks
+C:\Users\hersh\source\repos\DPS926_A2\DPS926_A2.Android\obj\Debug\110\android\src\com\dps\moviespace\R.java
