@@ -61,9 +61,12 @@ namespace DPS926_A2.Views
         private async void SortButton_Clicked(object sender, EventArgs e)
         {
             string choice = await DisplayActionSheet("Sort by", "Cancel", null, movieListManager.GetSortParameters().ToArray());
-            movieListManager.SortMovies(choice);
-            movieList.ItemsSource = movieListManager.MovieResultsSorted;
-            SortButton.Text = movieListManager.currentlyActiveParam;
+            if (!string.IsNullOrWhiteSpace(choice) && choice != "Cancel")
+            {
+                movieListManager.SortMovies(choice);
+                movieList.ItemsSource = movieListManager.MovieResultsSorted;
+                SortButton.Text = movieListManager.currentlyActiveParam;
+            }
         }
     }
 }

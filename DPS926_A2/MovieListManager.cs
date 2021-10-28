@@ -49,48 +49,45 @@ namespace DPS926_A2
 
         public void SortMovies(string choice)
         {
-            if (!(string.IsNullOrWhiteSpace(choice) || choice == "Cancel"))
+            switch (choice)
             {
-                switch (choice)
-                {
-                    case "Latest ↑":
-                        MovieResultsSorted = MovieResults.OrderByDescending(movie => DateTime.Parse(movie.release_date)).ToList();
-                        UpdateSortParameters(0, true);
-                        break;
-                    case "Latest ↓":
-                        MovieResultsSorted = MovieResults.OrderBy(movie => DateTime.Parse(movie.release_date)).ToList();
-                        UpdateSortParameters(0, false);
-                        break;
-                    case "Popularity ↑":
-                        MovieResultsSorted = MovieResults.OrderByDescending(movie => movie.popularity).ToList();
-                        UpdateSortParameters(1, true);
-                        break;
-                    case "Popularity ↓":
-                        MovieResultsSorted = MovieResults.OrderBy(movie => movie.popularity).ToList();
-                        UpdateSortParameters(1, false);
-                        break;
-                    case "Rating ↑":
-                        MovieResultsSorted = MovieResults.OrderByDescending(movie => movie.vote_average).ToList();
-                        UpdateSortParameters(2, true);
-                        break;
-                    case "Rating ↓":
-                        MovieResultsSorted = MovieResults.OrderBy(movie => movie.vote_average).ToList();
-                        UpdateSortParameters(2, false);
-                        break;
-                    case "Title ↑":
-                        MovieResultsSorted = MovieResults.OrderBy(movie => movie.title).ToList();
-                        UpdateSortParameters(3, true);
-                        break;
-                    case "Title ↓":
-                        MovieResultsSorted = MovieResults.OrderByDescending(movie => movie.title).ToList();
-                        UpdateSortParameters(3, false);
-                        break;
-                    case "Best Match":
-                    default:
-                        MovieResultsSorted = MovieResults.ToList();
-                        UpdateSortParameters(-1, false);
-                        break;
-                }
+                case "Latest ↑":
+                    MovieResultsSorted = MovieResults.OrderByDescending(movie => DateTime.Parse(movie.release_date)).ToList();
+                    UpdateSortParameters(0, true);
+                    break;
+                case "Latest ↓":
+                    MovieResultsSorted = MovieResults.OrderBy(movie => DateTime.Parse(movie.release_date)).ToList();
+                    UpdateSortParameters(0, false);
+                    break;
+                case "Popularity ↑":
+                    MovieResultsSorted = MovieResults.OrderByDescending(movie => movie.popularity).ToList();
+                    UpdateSortParameters(1, true);
+                    break;
+                case "Popularity ↓":
+                    MovieResultsSorted = MovieResults.OrderBy(movie => movie.popularity).ToList();
+                    UpdateSortParameters(1, false);
+                    break;
+                case "Rating ↑":
+                    MovieResultsSorted = MovieResults.OrderByDescending(movie => movie.vote_average).ToList();
+                    UpdateSortParameters(2, true);
+                    break;
+                case "Rating ↓":
+                    MovieResultsSorted = MovieResults.OrderBy(movie => movie.vote_average).ToList();
+                    UpdateSortParameters(2, false);
+                    break;
+                case "Title ↑":
+                    MovieResultsSorted = MovieResults.OrderBy(movie => movie.title).ToList();
+                    UpdateSortParameters(3, true);
+                    break;
+                case "Title ↓":
+                    MovieResultsSorted = MovieResults.OrderByDescending(movie => movie.title).ToList();
+                    UpdateSortParameters(3, false);
+                    break;
+                case "Best Match":
+                default:
+                    MovieResultsSorted = MovieResults.ToList();
+                    UpdateSortParameters(-1, false);
+                    break;
             }
         }
     }
